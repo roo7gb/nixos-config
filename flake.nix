@@ -16,7 +16,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, hyprland, inputs, ... }:
+  outputs = { self, nixpkgs, home-manager, hyprland, ... }:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -27,11 +27,12 @@
           allowUnfree = true;
         };
       };
+      inputs = { inherit inputs; };
     in {
       nixosConfigurations = {
         TARDIS = nixpkgs.lib.nixosSystem {
-          inherit system;
           specialArgs = {
+            inherit system;
             inherit inputs;
           };
 
