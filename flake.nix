@@ -29,7 +29,8 @@
           specialArgs = { inherit system; };
 
           modules = [ ./nix/configuration.nix ];
-
+        };
+      };
       homeConfigurations = {
         roo7gb = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
