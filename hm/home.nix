@@ -8,7 +8,9 @@
 {
   home = {
     packages = with pkgs; [
-      hello
+      fastfetch
+      git
+      neovim
     ];
 
     username = "roo7gb";
