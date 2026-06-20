@@ -3,6 +3,7 @@
 {
   lib,
   pkgs,
+  inputs,
   ...
 }:
 {
@@ -11,6 +12,8 @@
       fastfetch
       git
       neovim
+      gh
+      inputs.zen-browser.packsges.${pkgs.stdenv.hostPlatform.system}.default
     ];
 
     username = "roo7gb";

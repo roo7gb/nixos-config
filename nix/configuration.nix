@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 
 {
   imports =
@@ -57,6 +57,13 @@
     description = "Root Goldberg";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
+  };
+
+  # Enable hyprland window manager
+  programs.hyprland = {
+    enable = true;
+    package = inputs.hyprland.packages.${pkgs.stenv.hostPlatform.system}.hyprland;
+    portalPackage = inputs.hyprland.packages.${pkgs.stenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
   };
 
   # Allow unfree packages
