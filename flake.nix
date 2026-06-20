@@ -5,7 +5,7 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
-    hyprland.url = "github.hyprwm/Hyprland";
+    hyprland.url = "github:hyprwm/Hyprland";
     zen-browser = {
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -16,7 +16,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, hyprland, ... }:
+  outputs = { self, nixpkgs, home-manager, hyprland, inputs, ... }:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -30,8 +30,8 @@
     in {
       nixosConfigurations = {
         TARDIS = nixpkgs.lib.nixosSystem {
+          inherit system;
           specialArgs = {
-            inherit system;
             inherit inputs;
           };
 
