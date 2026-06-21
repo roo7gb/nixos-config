@@ -15,11 +15,13 @@
       git
       neovim
       gh
+      gimp
       inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
       vesktop
     ];
 
   imports = [
     ./programs/nushell.nix
+    ./programs/fastfetch.nix
   ];
 }

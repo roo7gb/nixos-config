@@ -110,7 +110,7 @@
     kitty
     wezterm
     waybar
-    swww
+    awww
     nerd-fonts."m+"
   ];
 
