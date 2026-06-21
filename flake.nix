@@ -16,36 +16,21 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, hyprland, ... }:
-    let
-      lib = nixpkgs.lib;
+  outputs = inputs@{ self, nixpkgs, home-manager, hyprland, ... }: {
+    nixosConfigurations.TARDIS = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-
-        config = {
-          allowUnfree = true;
-        };
-      };
-      inputs = { inherit inputs; };
-    in {
-      nixosConfigurations = {
-        TARDIS = nixpkgs.lib.nixosSystem {
-          specialArgs = {
-            inherit system;
-            inherit inputs;
+      modules = [
+        ./nix/configuration.nix
+        home-manager.nixosModules.home-manager {
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            users.roo7gb = import ./hm/home.nix;
+            backupFileExtension = "backup";
+            extraSpecialArgs = { inherit inputs; };
           };
-
-          modules = [ ./nix/configuration.nix ];
-        };
-      };
-      homeConfigurations = {
-        roo7gb = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          modules = [
-            ./hm/home.nix
-          ];
-        };
-      };
+        }
+      ];
     };
+  };
 }

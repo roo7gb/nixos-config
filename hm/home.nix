@@ -7,20 +7,21 @@
   ...
 }:
 {
-  home = {
-    packages = with pkgs; [
+  home.username = "roo7gb";
+  home.homeDirectory = "/home/roo7gb";
+  home.stateVersion = "26.05";
+  home.packages = with pkgs; [
       fastfetch
       git
       neovim
       gh
-      inputs.zen-browser.packsges.${pkgs.stdenv.hostPlatform.system}.default
+      inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
 
-    username = "roo7gb";
-    homeDirectory = "/home/roo7gb";
-
-    stateVersion = "26.05";
+  programs.nushell = {
+    enable = true;
+    shellAliases = {
+      v = "nvim";
+    };
   };
 }
-
-

@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ inputs, config, pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   imports =
@@ -57,13 +57,16 @@
     description = "Root Goldberg";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
+    shell = pkgs.nushell;
   };
+
+  # setup autologin
+  services.getty.autologinUser = "roo7gb";
 
   # Enable hyprland window manager
   programs.hyprland = {
     enable = true;
-    package = inputs.hyprland.packages.${pkgs.stenv.hostPlatform.system}.hyprland;
-    portalPackage = inputs.hyprland.packages.${pkgs.stenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+    xwayland.enable = true;
   };
 
   # Allow unfree packages
@@ -79,9 +82,13 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
+    wget
     git
     home-manager
+    kitty
+    wezterm
+    waybar
+    hyprpaper
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
