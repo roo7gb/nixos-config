@@ -13,7 +13,6 @@
   home.packages = with pkgs; [
       fastfetch
       git
-      neovim
       gh
       gimp
       inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
