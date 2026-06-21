@@ -112,6 +112,7 @@
     wezterm
     waybar
     awww
+    yazi
     nerd-fonts."m+"
   ];
 
