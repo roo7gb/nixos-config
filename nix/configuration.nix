@@ -105,6 +105,7 @@
   environment.systemPackages = with pkgs; [
     neovim
     wget
+    cliphist
     git
     home-manager
     hyprshot
