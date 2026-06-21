@@ -34,6 +34,7 @@
 	  external: {
             max_results: 100
 	  }
+	}
       }
       fastfetch
     '';
