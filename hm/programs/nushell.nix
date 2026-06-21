@@ -27,4 +27,14 @@
       fastfetch --logo-type kitty --logo-recache --logo-height 25 --logo "~/.nixflake/etc/cirnos.png"
     '';
   };
+
+  programs.starship = {
+    enable = true;
+    settings = {
+      add_newline = true;
+      character = {
+        error_symbol = "X ";
+      };
+    };
+  };
 }
