@@ -13,17 +13,19 @@
   home.packages = with pkgs; [
       awww
       btop
+      brightnessctl
       fastfetch
       git
       gh
       gimp
       hyprlock
+      hyprpolkitagent
       hyprshot
-      kitty
+      imagemagick
       mako
       neovim
       nerd-fonts.agave
-      thefuck
+      pay-respects
       vesktop
       waybar
       wezterm
