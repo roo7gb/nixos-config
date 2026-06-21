@@ -60,8 +60,10 @@
     shell = pkgs.nushell;
   };
 
-  # setup autologin
-  services.getty.autologinUser = "roo7gb";
+  # Enable SDDM
+  services.displayManager = {
+    sddm.enable = true;
+  };
 
   # Enable OpenGL
   hardware.graphics = {
