@@ -73,14 +73,22 @@
     nvidiaSettings = true;
   };
 
-  # Start with autologin
-  services.getty.autologinUser = "roo7gb";
+  # Enable greetd
+  services.greetd = {
+    enable = true;
+    settings = rec {
+      initial_session = {
+        command = "${pkgs.hyprland}/bin/Hyprland";
+	user = "roo7gb";
+      };
+      default_session = initial_session;
+    };
+  };
 
   # Enable hyprland window manager
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
-    withUWSM = true;
   };
 
   # Allow unfree packages
