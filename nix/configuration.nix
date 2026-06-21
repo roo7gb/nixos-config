@@ -63,6 +63,19 @@
   # setup autologin
   services.getty.autologinUser = "roo7gb";
 
+  # Enable OpenGL
+  hardware.graphics = {
+    enable = true;
+  };
+
+  # Load nvidia drivers for xorg and wayland
+  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.nvidia = {
+    modesetting.enable = true;
+    open = true;
+    nvidiaSettings = true;
+  };
+
   # Enable hyprland window manager
   programs.hyprland = {
     enable = true;
