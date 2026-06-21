@@ -78,7 +78,7 @@
     enable = true;
     settings = rec {
       initial_session = {
-        command = "${pkgs.hyprland}/bin/Hyprland";
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd start-hyprland";
 	user = "roo7gb";
       };
       default_session = initial_session;
