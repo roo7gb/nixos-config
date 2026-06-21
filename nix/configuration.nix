@@ -85,12 +85,6 @@
     };
   };
 
-  # Enable hyprland window manager
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -100,21 +94,13 @@
     "flakes"
   ];
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
+  # List packages installed in system profile.
+  # GLOBAL PACKAGES!!!
   environment.systemPackages = with pkgs; [
-    neovim
+    vim
     wget
     cliphist
-    git
     home-manager
-    hyprshot
-    kitty
-    wezterm
-    waybar
-    awww
-    yazi
-    nerd-fonts."m+"
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
