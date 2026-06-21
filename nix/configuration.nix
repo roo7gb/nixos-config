@@ -60,13 +60,6 @@
     shell = pkgs.nushell;
   };
 
-  # Enable SDDM
-  services.displayManager = {
-    sddm = {
-      wayland.enable = true;
-    };
-  };
-
   # Enable OpenGL
   hardware.graphics = {
     enable = true;
@@ -80,8 +73,15 @@
     nvidiaSettings = true;
   };
 
+  # Start with autologin
+  services.getty.autologinUser = "roo7gb";
+
   # Enable hyprland window manager
-  programs.hyprland.enable = true;
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+    withUWSM = true;
+  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -102,7 +102,7 @@
     kitty
     wezterm
     waybar
-    hyprpaper
+    swww
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
