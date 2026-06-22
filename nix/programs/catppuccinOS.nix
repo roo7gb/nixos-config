@@ -15,8 +15,6 @@
     flavor = "mocha";
     accent = "sapphire";
 
-    cursors.enable = true;
-
     gtk.icon.enable = true;
 
     tty.enable = true;

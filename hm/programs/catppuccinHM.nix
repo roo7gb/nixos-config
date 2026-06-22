@@ -20,10 +20,6 @@
       enable = true;
       transparent = true;
     };
-    cursors = {
-      enable = true;
-      accent = "sapphire";
-    };
     gtk.icon.enable = true;
     hyprland.enable = true;
     hyprlock.enable = true;
