@@ -352,7 +352,7 @@
 	    ## shutdown
 	    {
 	      keys = "SUPER + CTRL + SHIFT + Escape";
-	      dispatcher = ''hl.dsp.exec_cmd("systemctl shutdown")'';
+	      dispatcher = ''hl.dsp.exec_cmd("systemctl poweroff")'';
 	      flags.description = "Shutdown";
 	    }
 
