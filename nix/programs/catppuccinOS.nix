@@ -16,7 +16,5 @@
     accent = "sapphire";
 
     gtk.icon.enable = true;
-
-    tty.enable = true;
   };
 }
