@@ -25,8 +25,6 @@
     mako.enable = true;
     nushell.enable = true;
     nvim.enable = true;
-    rofi.enable = true;
-    starship.enable = true;
     waybar.enable = true;
     wezterm.enable = true;
     wlogout.enable = true;

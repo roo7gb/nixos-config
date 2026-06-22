@@ -26,7 +26,6 @@
       pay-respects
       pavucontrol
       playerctl
-      rofi
       waybar
       wezterm
       wlogout
@@ -48,6 +47,7 @@
     ./programs/hyprlock.nix
     ./programs/nushell.nix
     ./programs/fastfetch.nix
+    ./programs/rofi.nix
     ./programs/vesktop.nix
     ./programs/waybar.nix
     ./programs/wezterm.nix
