@@ -12,52 +12,92 @@
         type = "kitty-direct";
         source = "/home/roo7gb/.nixflake/etc/cirno.png";
 	height = 25;
+	padding = {
+          right = 1;
+	};
       };
       display = {
-        separator = " : ";
+        separator = " ";
       };
       modules = [
-        "title"
-        "separator"
+        {
+	  type = "title";
+	  format = "{#1}╭───────────── {#}{user-name-colored}";
+	}
+        {
+	  type = "custom";
+	  format = "{#1}│ {#}System Information";
+	}
         {
           type = "os";
-	  key = "OS";
+	  key = "{#separator}│  {#keys}󰍹 OS";
+	  format = "{2} btw 󱄅 ";
 	}
         {
 	  type = "kernel";
-	  key = "Kernel";
+	  key = "{#separator}│  {#keys}󰒋 Kernel";
 	}
 	{
 	  type = "uptime";
-	  key = "Uptime";
+	  key = "{#separator}│  {#keys}󰅐 Uptime";
+	}
+	{
+	  type = "custom";
+	  format = "{#1}│";
+	}
+	{
+	  type = "custom";
+	  format = "{#1}│ {#}Desktop Environment";
+	}
+        {
+	  type = "wm";
+	  key = "{#separator}│ {#keys}󱂬 WM";
+	}
+	{
+	  type = "display";
+	  key = "{#separator}│  {#keys}󰹑 Resolution";
 	}
 	{
 	  type = "shell";
-	  key = "Shell";
+	  key = "{#separator}│  {#keys}󰞷 Shell";
+	}
+        {
+	  type = "custom";
+	  format = "{#1}│";
 	}
 	{
-	  type = "wm";
-	  key = "WM";
-	}
-	{
-	  type = "terminal";
-	  key = "Terminal";
+	  type = "custom";
+	  format = "{#1}│ {#}Hardware Information";
 	}
         {
 	  type = "cpu";
-	  key = "CPU";
+	  key = "{#separator}│  {#keys}󰻠 CPU";
 	}
         {
 	  type = "gpu";
-	  key = "GPU";
+	  key = "{#separator}│  {#keys}󰢮 GPU";
 	}
         {
 	  type = "memory";
-	  key = "Memory";
+	  key = "{#separator}│  {#keys}󰍛 Memory";
 	}
         {
 	  type = "disk";
-	  key = "Disk";
+	  key = "{#separator}│  {#keys}󰋊 Disk (/)";
+	  folders = "/";
+	}
+        {
+	  type = "custom";
+	  format = "{#1}│";
+	}
+	{
+          type = "colors";
+	  key = "{#separator}│";
+	  symbol = "circle";
+	}
+	{
+	  type = "custom";
+	  format = "{#1}╰───────────────────────────────╯";
 	}
       ];
     };

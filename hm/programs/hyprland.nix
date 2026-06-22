@@ -224,7 +224,7 @@
 	    ## screenshot area
 	    {
 	      keys = "SUPER + CTRL + SHIFT + S";
-	      dispatcher = ''hl.dsp.exec_cmd("hyprshot -m area --clipboard-only")'';
+	      dispatcher = ''hl.dsp.exec_cmd("hyprshot -m area")'';
 	      flags.description = "Take a screenshot of an area to clipboard";
 	    }
 
