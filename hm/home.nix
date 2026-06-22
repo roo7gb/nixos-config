@@ -36,6 +36,13 @@
       yazi
       inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
+  home.pointerCursor = {
+    package = pkgs.phinger-cursors;
+    name = "Phinger-cursors-dark";
+    size = 24;
+    gtk.enable = true;
+    x11.enable = true;
+  };
 
   imports = [
     ./programs/hyprland.nix
