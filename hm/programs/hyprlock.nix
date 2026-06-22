@@ -8,6 +8,21 @@
   programs.hyprlock = {
     enable = true;
 
+    background = [
+      {
+        monitor = "";
+	path = "$HOME/.nixflake/etc/megadeth.png";
+	color = "rgba(25, 20, 20, 1.0)";
+	blur_passes = 1;
+	blur_size = 1;
+	noise = 0;
+	contrast = 0.69;
+	brightness = 0.3;
+	vibrancy = 0;
+	vibrancy_darkness = 0;
+      }
+    ];
+
     input-field = [
       {
         monitor = "";
