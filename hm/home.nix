@@ -36,6 +36,7 @@
 
   imports = [
     ./programs/hyprland.nix
+    ./programs/hyprlock.nix
     ./programs/nushell.nix
     ./programs/fastfetch.nix
   ];
