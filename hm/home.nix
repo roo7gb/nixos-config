@@ -38,11 +38,10 @@
     ];
   home.pointerCursor = {
     package = pkgs.phinger-cursors;
-    name = "Phinger-cursors-dark";
+    name = "phinger-cursors-dark";
     size = 24;
     gtk.enable = true;
     x11.enable = true;
-    hyprcursor.enable = true;
   };
 
   imports = [

@@ -18,6 +18,7 @@
           (lib.generators.mkLuaInline ''
             function()
               hl.exec_cmd("waybar")
+	      hl.exec_cmd("hyprctl setcursor phinger-cursors-dark 24")
             end'')
         ];
       };
@@ -26,6 +27,46 @@
       monitor = [
         (lib.generators.mkLuaInline ''{ output = "DP-1", mode = "highres", position = "1080x840", scale = 1}'')
         (lib.generators.mkLuaInline ''{ output = "HDMI-A-1", mode = "highres", position = "0x0", scale = 1, transform = 3}'')
+      ];
+
+      # ----- ENVIRONMENT ----- #
+      env = [
+        {
+	  _args = [
+            "LIBVA_DRIVER_NAME"
+	    "nvidia"
+	  ];
+	}
+	{
+	  _args = [
+	    "__GLX_VENDOR_LIBRARY_NAME"
+	    "nvidia"
+	  ];
+	}
+	{
+	  _args = [
+            "HYPRCURSOR_SIZE"
+	    "24"
+	  ];
+	}
+	{
+	  _args = [
+	    "HYPRCURSOR_THEME"
+	    "phinger-cursors-dark"
+	  ];
+	}
+	{
+	  _args = [
+	    "XCURSOR_SIZE"
+	    "24"
+	  ];
+	}
+	{
+	  _args = [
+	    "XCURSOR_THEME"
+	    "phinger-cursors-dark"
+	  ];
+	}
       ];
 
       # ----- CONFIG ----- #
@@ -58,28 +99,6 @@
 	    enabled = true;
 	  };
 	};
-
-        # ----- ENVIRONMENT ----- #
-	env = [
-          {
-	    _args = [
-              "LIBVA_DRIVER_NAME"
-	      "nvidia"
-	    ];
-	  }
-	  {
-	    _args = [
-	      "__GLX_VENDOR_LIBRARY_NAME"
-	      "nvidia"
-	    ];
-	  }
-	  {
-	    _args = [
-              "HYPRCURSOR_SIZE"
-	      "24"
-	    ];
-	  }
-	];
 
         # ----- INPUT ----- #
 	input = {
@@ -224,7 +243,7 @@
 	    ## screenshot area
 	    {
 	      keys = "SUPER + CTRL + SHIFT + S";
-	      dispatcher = ''hl.dsp.exec_cmd("hyprshot -m area")'';
+	      dispatcher = ''hl.dsp.exec_cmd("hyprshot -m region --clipboard-only")'';
 	      flags.description = "Take a screenshot of an area to clipboard";
 	    }
 
