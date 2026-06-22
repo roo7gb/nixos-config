@@ -12,8 +12,8 @@
       background = [
         {
           monitor = "";
-          path = "$HOME/.nixflake/etc/megadeth.png";
-          color = "rgba(25, 20, 20, 1.0)";
+          path = "$HOME/.nixflake/etc/nixwall.png";
+          color = "rgba(24, 24, 37, 1.0)";
           blur_passes = 1;
           blur_size = 1;
           noise = 0;
@@ -33,16 +33,16 @@
 	  dots_spacing = 0.15;
 	  dots_center = true;
 	  dots_rounding = -1;
-	  outer_color = "rgb(151515)";
-          inner_color = "rgb(1, 1, 1)";
-	  font_color = "rgb(200, 200, 200)";
+	  outer_color = "rgb(116, 199, 236)";
+          inner_color = "rgb(17, 17, 27)";
+	  font_color = "rgb(205, 214, 244)";
 	  fade_on_empty = true;
 	  fade_timeout = 1000;
 	  placeholder_text = "<i>Input Password...</i>";
 	  hide_input = false;
 	  rounding = -1;
-	  check_color = "rgb(204, 136, 34)";
-	  fail_color = "rgb(204, 34, 34)";
+	  check_color = "rgb(166, 227, 161)";
+	  fail_color = "rgb(243, 139, 168)";
 	  fail_transition = 300;
 	  capslock_color = -1;
 	  numlock_color = -1;
