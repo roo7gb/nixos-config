@@ -15,11 +15,8 @@
       btop
       brightnessctl
       cava
-      fastfetch
-      git
       gh
       gimp
-      hyprlock
       hyprpolkitagent
       hyprshot
       imagemagick
@@ -30,7 +27,6 @@
       pavucontrol
       playerctl
       rofi
-      vesktop
       waybar
       wezterm
       wlogout
@@ -47,10 +43,12 @@
 
   imports = [
     ./programs/catppuccinHM.nix
+    ./programs/git.nix
     ./programs/hyprland.nix
     ./programs/hyprlock.nix
     ./programs/nushell.nix
     ./programs/fastfetch.nix
+    ./programs/vesktop.nix
     ./programs/waybar.nix
     ./programs/wezterm.nix
     ./programs/wlogout.nix
