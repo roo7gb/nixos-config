@@ -2,7 +2,7 @@
 
 {
   pkgs,
-  ...,
+  ...
 }:
 {
   programs.hyprlock = {
