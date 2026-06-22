@@ -51,7 +51,7 @@
 	}
         {
 	  type = "wm";
-	  key = "{#separator}│ {#keys}󱂬 WM";
+	  key = "{#separator}│  {#keys}󱂬 WM";
 	}
 	{
 	  type = "display";
@@ -83,8 +83,8 @@
 	}
         {
 	  type = "disk";
-	  key = "{#separator}│  {#keys}󰋊 Disk (/)";
-	  folders = "/";
+	  key = "{#separator}│  {#keys}󰋊 Disk ({mountpoint})";
+	  folders = "/:/home:/mnt/bstor";
 	}
         {
 	  type = "custom";
