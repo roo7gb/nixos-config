@@ -84,7 +84,7 @@
     enable = true;
     settings = rec {
       initial_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd start-hyprland";
+        command = "${pkgs.hyprland}/bin/start-hyprland";
 	user = "roo7gb";
       };
       default_session = initial_session;
@@ -124,6 +124,7 @@
     wget
     cliphist
     home-manager
+    nwg-hello
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
