@@ -10,7 +10,7 @@
     autoEnable = false;
     enable = true;
     enableReleaseCheck = true;
-
+    cache.enable = true;
     flavor = "mocha";
 
     cursors = {
