@@ -51,6 +51,7 @@
     ./programs/nushell.nix
     ./programs/fastfetch.nix
     ./programs/waybar.nix
+    ./programs/wezterm.nix
     ./programs/wlogout.nix
   ];
 }
