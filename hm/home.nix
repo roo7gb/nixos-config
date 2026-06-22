@@ -14,6 +14,7 @@
       awww
       btop
       brightnessctl
+      cava
       fastfetch
       git
       gh
