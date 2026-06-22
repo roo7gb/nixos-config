@@ -127,9 +127,16 @@
 
     #waybar {
         background: rgb(30, 30, 46);
-	box-shadow: none
+	box-shadow: none;
 	border: none;
 	padding: 6px 12px;
+    }
+
+    #waybar .module {
+      padding: 0 10px;
+      margin: 0 5px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
     }
 
     #waybar .module:hover {
@@ -154,10 +161,10 @@
     .tooltip {
       background-color: rgba(108, 112, 134, 0.7);
       color: #74c7ec;
-      border-radiusL 4px;
+      border-radius: 4px;
       padding: 3px 6px;
       font-size: 11px;
     }
-    ''
+    '';
   };
 }

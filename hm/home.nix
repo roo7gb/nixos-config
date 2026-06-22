@@ -43,5 +43,6 @@
     ./programs/nushell.nix
     ./programs/fastfetch.nix
     ./programs/waybar.nix
+    ./programs/wlogout.nix
   ];
 }
