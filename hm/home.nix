@@ -28,11 +28,11 @@
       pay-respects
       pavucontrol
       playerctl
+      rofi
       vesktop
       waybar
       wezterm
       wlogout
-      wofi
       yazi
       inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];

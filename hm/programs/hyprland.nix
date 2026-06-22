@@ -231,7 +231,7 @@
 	    ## open app launcher
 	    {
 	      keys = "SUPER + SUPER_L";
-	      dispatcher = ''hl.dsp.exec_cmd("wofi --show run")'';
+	      dispatcher = ''hl.dsp.exec_cmd("rofi -show drun -show-icons")'';
 	      flags.description = "Open application launcher";
 	    }
 
