@@ -45,6 +45,7 @@
   };
 
   imports = [
+    ./programs/catppuccinHM.nix
     ./programs/hyprland.nix
     ./programs/hyprlock.nix
     ./programs/nushell.nix
