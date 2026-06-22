@@ -26,9 +26,12 @@
       neovim
       nerd-fonts.agave
       pay-respects
+      pavucontrol
+      playerctl
       vesktop
       waybar
       wezterm
+      wlogout
       wofi
       yazi
       inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
@@ -39,5 +42,6 @@
     ./programs/hyprlock.nix
     ./programs/nushell.nix
     ./programs/fastfetch.nix
+    ./programs/waybar.nix
   ];
 }
