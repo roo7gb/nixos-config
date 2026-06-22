@@ -92,6 +92,18 @@
     xwayland.enable = true;
   };
 
+  # allow hyprlock to auth
+  security.pam.services.hyprlock = {};
+
+  # enable pipewire
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+  };
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
