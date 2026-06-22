@@ -1,6 +1,7 @@
 # monitors.nix
 
 {
+  lib,
   ...
 }:
 {

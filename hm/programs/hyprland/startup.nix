@@ -1,6 +1,7 @@
 # startup.nix
 
 {
+  lib,
   ...
 }:
 {

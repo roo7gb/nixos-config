@@ -1,6 +1,7 @@
 # layerrules.nix
 
 {
+  lib,
   ...
 }:
 {

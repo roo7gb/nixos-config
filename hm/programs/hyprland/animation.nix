@@ -1,6 +1,7 @@
 # animation.nix
 
 {
+  lib,
   ...
 }:
 {

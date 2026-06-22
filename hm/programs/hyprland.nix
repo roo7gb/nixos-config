@@ -10,7 +10,7 @@
     ./hyprland/startup.nix
     ./hyprland/monitors.nix
     ./hyprland/env.nix
-    ./hyprland/layout.nix
+    ./hyprland/layouts.nix
     ./hyprland/general.nix
     ./hyprland/input.nix
     ./hyprland/animation.nix

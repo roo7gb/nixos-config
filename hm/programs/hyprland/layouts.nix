@@ -5,7 +5,7 @@
 }:
 {
   # ----- LAYOUTS ----- #
-  wayland.windowManager.hyprland.settings.config. = {
+  wayland.windowManager.hyprland.settings.config = {
     dwindle = {
       force_split = 2;
       preserve_split = true;
