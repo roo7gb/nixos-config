@@ -11,20 +11,14 @@
     enable = true;
     enableReleaseCheck = true;
     cache.enable = true;
+
     flavor = "mocha";
+    accent = "sapphire";
 
-    cursors = {
-      enable = true;
-      accent = "sapphire";
-    };
+    cursors.enable = true;
 
-    gtk.icon = {
-      enable = true;
-      accent = "sapphire";
-    };
+    gtk.icon.enable = true;
 
-    tty = {
-      enable = true;
-    };
+    tty.enable = true;
   };
 }
