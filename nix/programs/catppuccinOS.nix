@@ -26,5 +26,5 @@
     tty = {
       enable = true;
     };
-  }
+  };
 }
