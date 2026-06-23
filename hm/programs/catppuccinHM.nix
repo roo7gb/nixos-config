@@ -21,7 +21,6 @@
       transparent = true;
     };
     gtk.icon.enable = true;
-    nvim.enable = true;
     yazi.enable = true;
   };
 }
