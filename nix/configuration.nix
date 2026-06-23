@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./programs/catppuccinOS.nix
+      ./programs/steam.nix
     ];
 
   # Bootloader.
@@ -30,6 +31,9 @@
 
   # Enable firewall
   networking.firewall.enable = true;
+
+  # Disable IPv6 (it is gay)
+  networking.enableIPv6 = false;
 
   # Set your time zone.
   time.timeZone = "America/New_York";
@@ -67,6 +71,7 @@
   # Enable OpenGL
   hardware.graphics = {
     enable = true;
+    enable32Bit = true;
   };
 
   # Load nvidia drivers for xorg and wayland

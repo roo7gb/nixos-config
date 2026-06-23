@@ -24,7 +24,6 @@
       pay-respects
       pavucontrol
       playerctl
-      steam
       wezterm
       wlogout
       yazi
