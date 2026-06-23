@@ -20,11 +20,11 @@
       hyprpolkitagent
       hyprshot
       imagemagick
-      neovim
       nerd-fonts.agave
       pay-respects
       pavucontrol
       playerctl
+      steam
       wezterm
       wlogout
       yazi
