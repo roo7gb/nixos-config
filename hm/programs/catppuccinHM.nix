@@ -22,7 +22,6 @@
     };
     gtk.icon.enable = true;
     hyprland.enable = true;
-    mako.enable = true;
     nushell.enable = true;
     nvim.enable = true;
     waybar.enable = true;
@@ -31,3 +30,4 @@
     yazi.enable = true;
   };
 }
+
