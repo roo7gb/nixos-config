@@ -21,12 +21,7 @@
       transparent = true;
     };
     gtk.icon.enable = true;
-    hyprland.enable = true;
-    nushell.enable = true;
     nvim.enable = true;
-    waybar.enable = true;
-    wezterm.enable = true;
-    wlogout.enable = true;
     yazi.enable = true;
   };
 }

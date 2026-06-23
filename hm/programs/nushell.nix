@@ -3,9 +3,12 @@
 {
   lib,
   pkgs,
+  catppuccin,
   ...
 }:
 {
+  catppuccin.nushell.enable = true;
+
   programs.nushell = {
     enable = true;
     shellAliases = {

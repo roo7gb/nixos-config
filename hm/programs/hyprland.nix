@@ -2,9 +2,12 @@
 
 {
   lib,
+  catppuccin,
   ...
 }:
 {
+  catppuccin.hyprland.enable = true;
+
   # ----- IMPORTS ----- #
   imports = [
     ./hyprland/startup.nix

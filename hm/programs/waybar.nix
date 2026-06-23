@@ -3,9 +3,12 @@
 {
   config,
   pkgs,
+  catppuccin,
   ...
 }:
-{ 
+{
+  catppuccin.waybar.enable = true;
+
   programs.waybar = {
     enable = true;
     settings = {

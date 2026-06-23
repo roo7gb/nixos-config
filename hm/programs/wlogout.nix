@@ -2,9 +2,12 @@
 
 {
   pkgs,
+  catppuccin,
   ...
 }:
 {
+  catppuccin.wlogout.enable = true;
+
   programs.wlogout = {
     enable = true;
 
