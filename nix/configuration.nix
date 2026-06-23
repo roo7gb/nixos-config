@@ -96,6 +96,15 @@
     xwayland.enable = true;
   };
 
+  # config XDG portal
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-hyprland
+    ];
+    wlr.enable = true;
+  };
+
   # allow hyprlock to auth
   security.pam.services.hyprlock = {};
 
