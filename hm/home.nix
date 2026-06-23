@@ -48,6 +48,7 @@
     ./programs/nushell.nix
     ./programs/fastfetch.nix
     ./programs/rofi.nix
+    ./programs/spotify-player.nix
     ./programs/vesktop.nix
     ./programs/waybar.nix
     ./programs/wezterm.nix
