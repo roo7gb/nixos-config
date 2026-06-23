@@ -7,7 +7,7 @@
 {
   services.mako = {
     enable = true;
-    settings {
+    settings = {
       global = {
         anchor = "top-right";
 	font = "Agave Nerd Font 12";
