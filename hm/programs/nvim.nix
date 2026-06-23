@@ -4,11 +4,11 @@
   lib,
   catppuccin,
   ...
-}
+}:
 {
   catppuccin.nvim.enable = true;
 
-  programs.nvim = {
+  programs.neovim = {
     enable = true;
   };
 }

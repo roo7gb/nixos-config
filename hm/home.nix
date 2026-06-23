@@ -46,6 +46,7 @@
     ./programs/nushell.nix
     ./programs/fastfetch.nix
     ./programs/mako.nix
+    ./programs/nvim.nix
     ./programs/rofi.nix
     ./programs/spotify-player.nix
     ./programs/vesktop.nix
