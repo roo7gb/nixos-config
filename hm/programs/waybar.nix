@@ -105,19 +105,19 @@
           separate-outputs = true;
         };
 
-        "custom/playerctl" = {
-          format = "{icon}  <span>{}</span>";
-          "return-type" = "json";
-          "max-length" = 333;
-          exec = "playerctl -a metadata --format '{\"text\": \"{{artist}} ~ {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F";
-          "on-click-middle" = "playerctl play-pause";
-          "on-click" = "playerctl previous";
-          "on-click-right" = "playerctl next";
-          "format-icons" = {
-            Playing = "<span foreground='#98BB6C'></span>";
-            Paused = "<span foreground='#E46876'></span>";
-          };
-        };
+        "mpris" = {
+	  format = "{status-icon} {title} - {artist}";
+	  format-paused = "{status_icon} <i>{title} - {artist}</i>";
+	  status-icons = {
+	    playing = "▶";
+            paused = "⏸";
+            stopped = "⏹";
+	  };
+	  max-length = 30;
+	  ignored-players = [
+	    "zen"
+	  ];
+	};
       };
     };
     style = ''
