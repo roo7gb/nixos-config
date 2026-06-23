@@ -20,13 +20,11 @@
       hyprpolkitagent
       hyprshot
       imagemagick
-      mako
       neovim
       nerd-fonts.agave
       pay-respects
       pavucontrol
       playerctl
-      waybar
       wezterm
       wlogout
       yazi
@@ -47,6 +45,7 @@
     ./programs/hyprlock.nix
     ./programs/nushell.nix
     ./programs/fastfetch.nix
+    ./programs/mako.nix
     ./programs/rofi.nix
     ./programs/spotify-player.nix
     ./programs/vesktop.nix
