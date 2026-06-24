@@ -31,7 +31,7 @@
         ];
 
         "modules-right" = [
-          "custom/playerctl"
+          "mpris"
           "pulseaudio"
           "tray"
           "network"
@@ -106,18 +106,19 @@
         };
 
         "mpris" = {
-	  format = "{status-icon} {title} - {artist}";
-	  format-paused = "{status_icon} <i>{title} - {artist}</i>";
-	  status-icons = {
-	    playing = "▶";
+          format = "{player_icon} {dynamic}";
+          format-paused = "{status_icon} <i>{dynamic}</i>";
+          dynamic-len = 40; # Truncates text to prevent bar stretching
+          player-icons = {
+            default = "▶";
+            spotify = "";
+            mpv = "🎵";
+          };
+          status-icons = {
             paused = "⏸";
-            stopped = "⏹";
-	  };
-	  max-length = 30;
-	  ignored-players = [
-	    "zen"
-	  ];
-	};
+          };
+          ignored-players = [ "zen" ];
+        };
       };
     };
     style = ''
@@ -158,7 +159,15 @@
 
     #waybar .separator {
       margin: 0 8px;
-      color: #45475a
+      color: #45475a;
+    }
+
+    #mpris {
+      color: #cdd6f4;
+      padding: 0 10px;
+      margin: 0 4px;
+      background-color: rgb(30, 30, 46);
+      border-radius: 8px;
     }
 
     .tooltip {
