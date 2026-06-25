@@ -35,6 +35,9 @@
   # Disable IPv6 (it is gay)
   networking.enableIPv6 = false;
 
+  # DNS services
+  services.resolved.enable = true;
+
   # Set your time zone.
   time.timeZone = "America/New_York";
 
