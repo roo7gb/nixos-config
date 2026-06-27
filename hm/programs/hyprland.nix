@@ -21,6 +21,7 @@
     ./hyprland/misc.nix
     ./hyprland/binds.nix
     ./hyprland/layerrules.nix
+    ./hyprland/windowrules.nix
   ];
   wayland.windowManager.hyprland = {
     enable = true;

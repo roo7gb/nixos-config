@@ -21,6 +21,9 @@
 
     (lib.generators.mkLuaInline ''{ match = { namespace = "rofi" }, animation = "fade" }'')
     (lib.generators.mkLuaInline ''{ match = { namespace = "awww" }, animation = "fade" }'')
+
+    (lib.generators.mkLuaInline ''{ match = { namespace = "hyprpicker" }, animation = "none" }'')
+    (lib.generators.mkLuaInline ''{ match = { namespace = "selection" }, animation = "none" }'')    
   ];
 }
 
