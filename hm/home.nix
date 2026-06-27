@@ -23,6 +23,7 @@
       nerd-fonts.agave
       pavucontrol
       playerctl
+      prismlauncher
       wezterm
       wlogout
       yazi
@@ -45,7 +46,6 @@
     ./programs/fastfetch.nix
     ./programs/mako.nix
     ./programs/nvim.nix
-    ./programs/pay-respects.nix
     ./programs/rofi.nix
     ./programs/spotify-player.nix
     ./programs/vesktop.nix
