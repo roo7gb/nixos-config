@@ -21,7 +21,6 @@
       hyprshot
       imagemagick
       nerd-fonts.agave
-      pay-respects
       pavucontrol
       playerctl
       wezterm
@@ -46,6 +45,7 @@
     ./programs/fastfetch.nix
     ./programs/mako.nix
     ./programs/nvim.nix
+    ./programs/pay-respects.nix
     ./programs/rofi.nix
     ./programs/spotify-player.nix
     ./programs/vesktop.nix
