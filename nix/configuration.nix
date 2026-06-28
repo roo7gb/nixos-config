@@ -87,6 +87,11 @@
     nvidiaSettings = true;
   };
 
+  # force wayland in electron
+  environment.sessionVariables = {
+    NIX_OZONE_WL = "1";
+  };
+
   # Enable greetd
   services.greetd = {
     enable = true;
