@@ -7,7 +7,7 @@
   ...
 }:
 {
-  catppuccin.nushell.enable = true;
+  # catppuccin.nushell.enable = true;
 
   programs.nushell = {
     enable = true;
@@ -36,8 +36,8 @@
     enable = true;
     settings = {
       add_newline = false;
-      format = ''$character$os$hostname$directory[](#74c7ec)$time[ ](#74c7ec)$cmd_duration$git_branch$git_status $python$aws$golang$java$rust$ruby$scala$dart$conda$pijul_channel$lua$rlang$package$buf$memory_usage$docker_context
-[└─>](#74c7ec)'';
+      format = ''$character(#78a9ff)$os$hostname$directory[](#d6b471)$time[ ](#d6b471)$cmd_duration$git_branch$git_status $python$aws$golang$java$rust$ruby$scala$dart$conda$pijul_channel$lua$rlang$package$buf$memory_usage$docker_context
+[└─>](#78a9ff)'';
       continuation_prompt = "▶▶ ";
       character = {
         error_symbol = "X ";
@@ -45,14 +45,14 @@
       time = {
         disabled = false;
 	time_format = "%r";
-	style = "bg:#64afd1";
-	format = "[[ 󱑍 $time ](bg:#74c7ec fg:#11111b)]($style)";
+	style = "bg:#eac67e";
+	format = "[[ 󱑍 $time ](bg:#d6b471 fg:#282828)]($style)";
       };
       cmd_duration = {
-        format = "last command: [$duration](#f9e2af)";
+        format = "last command: [$duration](#dfdfe0)";
       };
       os = {
-        format = "[  ](#cba6f7)";
+        format = "[  ](#78a9ff)";
 	disabled = false;
       };
 
@@ -61,7 +61,7 @@
       };
       hostname = {
         ssh_only = false;
-	format = "on [$hostname](#89dceb)";
+	format = "on [$hostname](#33b1ff)";
 	disabled = false;
       };
       directory = {
@@ -80,7 +80,7 @@
       };
       git_status = {
         format = "[$all_status$ahead_behind]($style) ";
-        style = "#a6e3a1";
+        style = "#78a9ff";
         conflicted = "🏳";
         up_to_date = "";
         untracked = " ";
@@ -105,7 +105,7 @@
       memory_usage = {
         symbol = "󰍛 ";
 	disabled = true;
-	style = "#bac2de";
+	style = "#ee5396";
 	threshold = 1;
 	format = "$symbol [$ram(|$swap)]($style) ";
       };

@@ -5,7 +5,6 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
-    catppuccin.url = "github:catppuccin/nix";
     zen-browser = {
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -14,14 +13,18 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, catppuccin, ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, catppuccin, stylix, ... }: {
     nixosConfigurations.TARDIS = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         ./nix/configuration.nix
-	catppuccin.nixosModules.catppuccin
+	stylix.nixosModules.stylix
         home-manager.nixosModules.home-manager {
           home-manager = {
             useGlobalPkgs = true;
@@ -29,7 +32,6 @@
             users.roo7gb = {
               imports = [
                 ./hm/home.nix
-		catppuccin.homeModules.catppuccin
 	      ];
 	    };
             backupFileExtension = "backup";

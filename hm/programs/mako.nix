@@ -5,7 +5,7 @@
   ...
 }:
 {
-  catppuccin.mako.enable = true;
+  # catppuccin.mako.enable = true;
 
   services.mako = {
     enable = true;

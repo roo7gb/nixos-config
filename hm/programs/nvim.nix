@@ -6,7 +6,7 @@
   ...
 }:
 {
-  catppuccin.nvim.enable = true;
+  # catppuccin.nvim.enable = true;
 
   programs.neovim = {
     enable = true;

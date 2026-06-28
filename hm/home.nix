@@ -38,7 +38,7 @@
   };
 
   imports = [
-    ./programs/catppuccinHM.nix
+    # ./programs/catppuccinHM.nix
     ./programs/git.nix
     ./programs/hyprland.nix
     ./programs/hyprlock.nix
@@ -48,6 +48,7 @@
     ./programs/nvim.nix
     ./programs/rofi.nix
     ./programs/spotify-player.nix
+    ./programs/stylix.nix
     ./programs/vesktop.nix
     ./programs/waybar.nix
     ./programs/wezterm.nix

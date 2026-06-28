@@ -7,7 +7,7 @@
   ...
 }:
 {
-  catppuccin.waybar.enable = true;
+  # catppuccin.waybar.enable = true;
 
   programs.waybar = {
     enable = true;
@@ -126,11 +126,11 @@
         font-family: "Agave Nerd Font", monospace;
 	font-weight: 500;
 	font-size: 14px;
-	color: #cdd6f4;
+	color: #f2f4f8;
     }
 
     #waybar {
-        background: rgb(30, 30, 46);
+        background: #282828;
 	box-shadow: none;
 	border: none;
 	padding: 6px 12px;
@@ -144,7 +144,7 @@
     }
 
     #waybar .module:hover {
-        background-color: rgba(108, 112, 134, 0.1);
+        background-color: #484848;
     }
 
     #waybar .clock {
@@ -159,19 +159,19 @@
 
     #waybar .separator {
       margin: 0 8px;
-      color: #45475a;
+      color: #484848;
     }
 
     #mpris {
-      color: #cdd6f4;
+      color: #78a9ff;
       padding: 0 10px;
       margin: 0 4px;
-      background-color: rgb(30, 30, 46);
+      background-color: #282828;
       border-radius: 8px;
     }
 
     .tooltip {
-      background-color: rgba(108, 112, 134, 0.7);
+      background-color: #484848;
       color: #74c7ec;
       border-radius: 4px;
       padding: 3px 6px;

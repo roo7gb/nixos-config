@@ -6,7 +6,7 @@
   ...
 }:
 {
-  catppuccin.wlogout.enable = true;
+  # catppuccin.wlogout.enable = true;
 
   programs.wlogout = {
     enable = true;

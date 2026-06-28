@@ -6,7 +6,7 @@
   ...
 }:
 {
-  catppuccin.hyprland.enable = true;
+  # catppuccin.hyprland.enable = true;
 
   # ----- IMPORTS ----- #
   imports = [

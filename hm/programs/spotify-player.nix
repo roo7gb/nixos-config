@@ -6,7 +6,7 @@
   ...
 }:
 {
-  catppuccin.spotify-player.enable = true;
+  # catppuccin.spotify-player.enable = true;
 
   programs.spotify-player = {
     enable = true;

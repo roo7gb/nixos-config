@@ -8,8 +8,9 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./programs/catppuccinOS.nix
+      # ./programs/catppuccinOS.nix
       ./programs/steam.nix
+      ./programs/stylix.nix
     ];
 
   # Bootloader.

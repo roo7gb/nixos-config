@@ -6,7 +6,7 @@
   ...
 }:
 {
-  catppuccin.wezterm.enable = true;
+  # catppuccin.wezterm.enable = true;
 
   programs.wezterm = {
     enable = true;

@@ -23,8 +23,6 @@ in
 
     theme = {
       "*" = {
-        background-color = mkLiteral "#11111b";
-	text-color = mkLiteral "#cdd6f4";
 	font = "Agave Nerd Font 10";
       };
 
@@ -45,13 +43,11 @@ in
 
       "inputbar" = {
         padding = mkLiteral "12px";
-	background-color = mkLiteral "#313244";
 	children = map mkLiteral [ "prompt" "entry" ];
       };
 
       "prompt" = {
         margin = mkLiteral "0px 8px 0px 0px";
-	text-color = mkLiteral "#74c7ec";
 	background-color = mkLiteral "#313244";
       };
 
@@ -77,15 +73,6 @@ in
 
       "element-text" = {
 	vertical-align = mkLiteral "0.5";
-      };
-
-      "element normal.normal" = {
-        background-color = mkLiteral "transparent";
-      };
-
-      "element selected.normal" = {
-        background-color = mkLiteral "#74c7ec";
-	text-color = mkLiteral "#11111b";
       };
 
       "element-icon" = {
