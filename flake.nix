@@ -19,7 +19,7 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, catppuccin, stylix, ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, stylix, ... }: {
     nixosConfigurations.TARDIS = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
