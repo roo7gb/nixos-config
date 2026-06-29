@@ -1,6 +1,7 @@
 # git.nix
 
 {
+  pkgs,
   ...
 }:
 {
@@ -11,6 +12,7 @@
       user.name = "roo7gb";
       user.email = "miasma1007@gmail.com";
       init.defaultBranch = "main";
+      credential.helper = "oauth";
     };
   };
 }

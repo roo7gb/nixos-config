@@ -15,8 +15,8 @@
       btop
       brightnessctl
       cava
-      gh
       gimp
+      git-credential-oauth
       hyprpolkitagent
       hyprshot
       imagemagick
