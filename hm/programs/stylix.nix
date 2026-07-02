@@ -27,6 +27,10 @@
 	fonts.enable = false;
       };
       spotify-player.enable = true;
+      vesktop = {
+        enable = true;
+	fonts.enable = false;
+      };
       wezterm = {
         enable = true;
 	fonts.enable = false;

@@ -35,7 +35,9 @@
 	      ];
 	    };
             backupFileExtension = "backup";
-            extraSpecialArgs = { inherit inputs; };
+            extraSpecialArgs = {
+	      inherit inputs;
+	    };
           };
         }
       ];
