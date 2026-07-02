@@ -17,13 +17,17 @@
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nvf = {
+      url = "github:NotAShelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, stylix, ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, stylix, nvf, ... }: {
     nixosConfigurations.TARDIS = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
-        ./nix/configuration.nix
+        ./host/configuration.nix
 	stylix.nixosModules.stylix
         home-manager.nixosModules.home-manager {
           home-manager = {
@@ -31,7 +35,8 @@
             useUserPackages = true;
             users.roo7gb = {
               imports = [
-                ./hm/home.nix
+                ./host/home.nix
+		nvf.homeManagerModules.default
 	      ];
 	    };
             backupFileExtension = "backup";
