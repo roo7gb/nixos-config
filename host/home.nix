@@ -33,20 +33,7 @@
   };
 
   imports = [
-    ./programs/git.nix
-    ./programs/hyprland.nix
-    ./programs/hyprlock.nix
-    ./programs/nushell.nix
-    ./programs/fastfetch.nix
-    ./programs/mako.nix
-    ./programs/nvim.nix
-    ./programs/rofi.nix
-    ./programs/spotify-player.nix
-    ./programs/stylix.nix
-    ./programs/vesktop.nix
-    ./programs/waybar.nix
-    ./programs/wezterm.nix
-    ./programs/wlogout.nix
+    ../homeManagerModules
   ];
 
   # - TOGGLES ----------------- #
