@@ -16,17 +16,18 @@
         telescope.enable = true;
         autocomplete.nvim-cmp.enable = true;
 
-	options = {
-          tabstop = 4;
-          shiftwidth = 4;
-	};
+        options = {
+          tabstop = 2;
+          shiftwidth = 2;
+        };
+
+        lsp.enable = true;
 
         languages = {
-          enableLSP = true;
           enableTreesitter = true;
 
           nix.enable = true;
-	};
+        };
       };
     };
   };
