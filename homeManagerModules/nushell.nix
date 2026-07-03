@@ -2,14 +2,8 @@
 
 { config, lib, pkgs, ... }: {
 
-  # - TOGGLE ------------------ #
-  options = {
-    nushell.enable =
-      lib.mkEnableOption "enables nushell";
-  };
-
   # - NU CONFIG --------------- #
-  programs.nushell = lib.mkIf config.nushell.enable {
+  programs.nushell = {
     enable = true;
     shellAliases = {
       v = "nvim";
@@ -26,14 +20,14 @@
 	  external: {
             max_results: 100
 	  }
-	}
+        }
       }
       fastfetch --logo-type kitty --logo-recache --logo-height 15 --logo "~/.nixflake/etc/yakumOS.png"
     '';
   };
 
   # - STARSHIP CONFIG --------- #
-  programs.starship = lib.mkIf config.nushell.enable {
+  programs.starship = {
     enable = true;
     settings = {
       add_newline = false;
@@ -46,15 +40,15 @@
       time = {
         disabled = false;
 	time_format = "%r";
-	style = "bg:#eac67e";
-	format = "[[ 󱑍 $time ](bg:#d6b471 fg:#282828)]($style)";
+        style = "bg:#eac67e";
+        format = "[[ 󱑍 $time ](bg:#d6b471 fg:#282828)]($style)";
       };
       cmd_duration = {
         format = "last command: [$duration](#dfdfe0)";
       };
       os = {
         format = "[  ](#78a9ff)";
-	disabled = false;
+        disabled = false;
       };
 
       os.symbols = {
@@ -71,13 +65,13 @@
 	home_symbol = "󰋜 ~";
 	read_only_style = "197";
 	read_only = "  ";
-	format = " at [$path]($style)[$read_only]($read_only_style) ";
+        format = " at [$path]($style)[$read_only]($read_only_style) ";
       };
       git_branch = {
         symbol = " ";
 	format = "[$symbol$branch]($style)";
 	truncation_symbol = ".../";
-	style = "#a6e3a1";
+        style = "#a6e3a1";
       };
       git_status = {
         format = "[$all_status$ahead_behind]($style) ";
@@ -108,14 +102,14 @@
 	disabled = true;
 	style = "#ee5396";
 	threshold = 1;
-	format = "$symbol [$ram(|$swap)]($style) ";
+        format = "$symbol [$ram(|$swap)]($style) ";
       };
       nodejs.symbol = " ";
       package.symbol = "󰏗 ";
       pijul_channel.symbol = " ";
       python = {
         symbol = " ";
-	pyenv_version_name = true;
+        pyenv_version_name = true;
       };
       ruby.symbol = " ";
       rlang.symbol = "󰟔 ";

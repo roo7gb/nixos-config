@@ -2,14 +2,8 @@
 
 { config, lib, pkgs, ... }: {
 
-  # - TOGGLE ------------------ #
-  options = {
-    hyprlock.enable =
-      lib.mkEnableOption "enables hyprlock";
-  };
-
   # - CONFIG ------------------ #
-  programs.hyprlock = lib.mkIf config.hyprlock.enable {
+  programs.hyprlock = {
     enable = true;
 
     settings = {
@@ -31,7 +25,7 @@
       input-field = [
         {
           monitor = "";
-	  size = "200, 50";
+          size = "200, 50";
 	  outline_thickness = 3;
 	  dots_size = 0.33;
 	  dots_spacing = 0.15;

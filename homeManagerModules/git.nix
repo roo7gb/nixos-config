@@ -2,14 +2,8 @@
 
 { config, lib, pkgs, ... }: {
 
-  # - TOGGLE ------------------ #
-  options = {
-    git.enable =
-      lib.mkEnableOption "enables git";
-  };
-
   # - CONFIG ------------------ #
-  programs.git = lib.mkIf config.git.enable {
+  programs.git = {
     enable = true;
 
     settings = {

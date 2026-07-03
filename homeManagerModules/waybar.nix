@@ -2,14 +2,8 @@
 
 { config, lib, pkgs, ... }: {
 
-  # - TOGGLE ------------------ #
-  options = {
-    waybar.enable =
-      lib.mkEnableOption "enables waybar";
-  };
-
   # - CONFIG ------------------ #
-  programs.waybar = lib.mkIf config.waybar.enable {
+  programs.waybar = {
     enable = true;
     settings = {
       mainBar = {
@@ -133,7 +127,7 @@
         background: #282828;
 	box-shadow: none;
 	border: none;
-	padding: 6px 12px;
+        padding: 6px 12px;
     }
 
     #waybar .module {

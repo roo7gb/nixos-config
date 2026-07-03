@@ -35,8 +35,4 @@
   imports = [
     ../homeManagerModules
   ];
-
-  # - TOGGLES ----------------- #
-  spotify.enable = true;
-  vesktop.enable = true;
 }

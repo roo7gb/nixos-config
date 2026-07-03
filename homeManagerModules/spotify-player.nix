@@ -2,14 +2,8 @@
 
 { config, lib, pkgs, ... }: {
 
-  # - TOGGLE ------------------ #
-  options = {
-    spotify.enable =
-      lib.mkEnableOption "enables spotify";
-  };
-
   # - CONFIG ------------------ #
-  programs.spotify-player = lib.mkIf config.spotify.enable {
+  programs.spotify-player = {
     enable = true;
 
     settings = {

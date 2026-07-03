@@ -1,7 +1,7 @@
 # default.nix
 
 { config, lib, pkgs, ... }: {
-  import = [
+  imports = [
     ./git.nix
     ./hyprlock.nix
     ./nushell.nix
@@ -17,17 +17,5 @@
     ./wlogout.nix
     ./hyprland
   ];
-
-  hyprland.enable = true;
-  git.enable = true;
-  hyprlock.enable = true;
-  nushell.enable = true;
-  fastfetch.enable = true;
-  mako.enable = true;
-  nvim.enable = true;
-  rofi.enable = true;
-  stylixHM.enable = true;
-  wezterm.enable = true;
-  wlogout.enable = true;
 }
 

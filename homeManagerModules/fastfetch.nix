@@ -2,21 +2,15 @@
 
 { config, lib, pkgs, ... }: {
 
-  # - TOGGLE ------------------ #
-  options = {
-    fastfetch.enable =
-      lib.mkEnableOption "enables fastfetch";
-  };
-
   # - CONFIG ------------------ #
-  programs.fastfetch = lib.mkIf config.fastfetch.enable {
+  programs.fastfetch = {
     enable = true;
     settings = {
       logo = {
         type = "kitty-direct";
         source = "/home/roo7gb/.nixflake/etc/yakumOS.png";
-	height = 25;
-	padding = {
+        height = 25;
+        padding = {
           right = 1;
 	};
       };
@@ -25,7 +19,7 @@
       };
       modules = [
         {
-	  type = "title";
+          type = "title";
 	  format = "{#1}╭───────────── {#}{user-name-colored}";
 	}
         {
@@ -36,7 +30,7 @@
           type = "os";
 	  key = "{#separator}│  {#keys}󰍹 OS";
 	  format = "{2} btw 󱄅 ";
-	}
+        }
         {
 	  type = "kernel";
 	  key = "{#separator}│  {#keys}󰒋 Kernel";

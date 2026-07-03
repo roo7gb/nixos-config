@@ -2,19 +2,13 @@
 
 { config, lib, pkgs, ... }: {
 
-  # - TOGGLE ------------------ #
-  options = {
-    mako.enable =
-      lib.mkEnableOption "enables mako";
-  };
-
   # - CONFIG ------------------ #
-  services.mako = lib.mkIf config.mako.enable {
+  services.mako = {
     enable = true;
     settings = {
       global = {
         anchor = "top-right";
-	font = "Agave Nerd Font 12";
+        font = "Agave Nerd Font 12";
 	margin = "10";
 	padding = "10";
 	width = 200;

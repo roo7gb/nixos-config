@@ -2,14 +2,8 @@
 
 { config, lib, pkgs, ... }: {
 
-  # - TOGGLE ------------------ #
-  options = {
-    wlogout.enable =
-      lib.mkEnableOption "enables wlogout";
-  };
-
   # - CONFIG ------------------ #
-  programs.wlogout = lib.mkIf config.wlogout.enable {
+  programs.wlogout = {
     enable = true;
 
     layout = [
@@ -21,7 +15,7 @@
       }
       {
         label = "logout";
-	action = "hyprctl dispatch exit";
+	ction = "hyprctl dispatch exit";
 	text = "Logout";
 	keybind = "e";
       }
@@ -41,7 +35,7 @@
         label = "suspend";
 	action = "systemctl suspend";
 	text = "Suspend";
-	keybind = "u";
+        keybind = "u";
       }
     ];
   };

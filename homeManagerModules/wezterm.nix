@@ -2,14 +2,8 @@
 
 { config, lib, ... }: {
 
-  # - TOGGLE ------------------ #
-  options = {
-    wezterm.enable =
-      lib.mkEnableOption "enables wezterm";
-  };
-
   # - CONFIG ------------------ #
-  programs.wezterm = lib.mkIf config.wezterm.enable {
+  programs.wezterm = {
     enable = true;
 
     settings = {

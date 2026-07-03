@@ -1,13 +1,10 @@
 # default.nix
 
-{ config, ... }:
+{ config, ... }: {
 
-{
-  import = [
+  imports = [
     ./steam.nix
     ./stylix.nix
   ];
-
-  stylixMain.enable = true;
 }
 

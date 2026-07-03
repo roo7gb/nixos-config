@@ -6,14 +6,8 @@ let
   inherit (config.lib.formats.rasi) mkLiteral;
 in
 {
-  # - TOGGLE ------------------ #
-  options = {
-    rofi.enable =
-      lib.mkEnableOption "enables rofi";
-  };
-
   # - CONFIG ------------------ #
-  programs.rofi = lib.mkIf config.rofi.enable {
+  programs.rofi = {
     enable = true;
     package = pkgs.rofi;
 
@@ -27,7 +21,7 @@ in
 
     theme = {
       "*" = {
-	font = "Agave Nerd Font 10";
+        font = "Agave Nerd Font 10";
       };
 
       "window" = {
@@ -42,7 +36,7 @@ in
 
       "mainbox" = {
         orientation = mkLiteral "vertical";
-	children = map mkLiteral [ "inputbar" "listview" ];
+        children = map mkLiteral [ "inputbar" "listview" ];
       };
 
       "inputbar" = {
@@ -52,12 +46,12 @@ in
 
       "prompt" = {
         margin = mkLiteral "0px 8px 0px 0px";
-	background-color = mkLiteral "#313244";
+        background-color = mkLiteral "#313244";
       };
 
       "entry" = {
         placeholder = "Search...";
-	placeholder-color = mkLiteral "#313244";
+        placeholder-color = mkLiteral "#313244";
       };
 
       "listview" = {

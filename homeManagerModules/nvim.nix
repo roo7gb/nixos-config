@@ -1,29 +1,33 @@
 # nvim.nix
 
-{ config, lib, pkgs, inputs, ... }: {
-
-  # - TOGGLE ------------------ #
-  options = {
-    nvim.enable =
-      lib.mkEnableOption "enables nvim";
-  };
+{ config, lib, pkgs, ... }: {
 
   # - NEOVIM ------------------ #
-  programs.neovim = lib.mkIf config.nvim.enable {
+  programs.neovim = {
     enable = true;
   };
 
   # - NVF --------------------- #
-  vim = lib.mkIf config.nvim.enable {
-    statusline.lualine.enable = true;
-    telescope.enable = true;
-    autocomplete.nvim-cmp.enable = true;
+  programs.nvf = {
+    enable = true;
+    settings = {
+      vim = {
+        statusline.lualine.enable = true;
+        telescope.enable = true;
+        autocomplete.nvim-cmp.enable = true;
 
-    languages = {
-      enableLSP = true;
-      enableTreesitter = true;
+	options = {
+          tabstop = 4;
+          shiftwidth = 4;
+	};
 
-      nix.enable = true;
+        languages = {
+          enableLSP = true;
+          enableTreesitter = true;
+
+          nix.enable = true;
+	};
+      };
     };
   };
 }

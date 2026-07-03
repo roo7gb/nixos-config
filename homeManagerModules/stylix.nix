@@ -2,28 +2,22 @@
 
 { config, lib, ... }: {
 
-  # - TOGGLE ------------------ #
-  options = {
-    stylixHM.enable =
-      lib.mkEnableOption "enables stylixHM";
-  };
-
   # - CONFIG ------------------ #
-  stylix = lib.mkIf config.stylixHM.enable {
+  stylix = {
     targets = {
       btop.enable = true;
       cava.enable = true;
       mako = {
         enable = true;
-	fonts.enable = false;
+	    fonts.enable = false;
       };
-      neovim = {
+      nvf = {
         enable = true;
-	transparentBackground = {
-	  main = true;
-	  numberLine = true;
-	  signColumn = true;
-	};
+	    transparentBackground = {
+	      main = true;
+	      numberLine = true;
+	      signColumn = true;
+	    };
       };
       nushell.enable = true;
       rofi = {

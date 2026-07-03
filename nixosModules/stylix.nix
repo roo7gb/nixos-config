@@ -2,12 +2,7 @@
 
 { lib, config, pkgs, ... }:{
 
-  options = {
-    stylixMain.enable =
-      lib.mkEnableOption "enables stylixMain";
-  };
-
-  stylix = lib.mkIf config.stylixMain.enable {
+  stylix = {
     enable = true;
     autoEnable = false;
     base16Scheme = {
