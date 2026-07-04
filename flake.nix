@@ -28,7 +28,7 @@
       system = "x86_64-linux";
       modules = [
         ./host/configuration.nix
-	stylix.nixosModules.stylix
+        stylix.nixosModules.stylix
         home-manager.nixosModules.home-manager {
           home-manager = {
             useGlobalPkgs = true;
@@ -36,13 +36,13 @@
             users.roo7gb = {
               imports = [
                 ./host/home.nix
-		nvf.homeManagerModules.default
-	      ];
-	    };
+                nvf.homeManagerModules.default
+              ];
+            };
             backupFileExtension = "backup";
             extraSpecialArgs = {
-	      inherit inputs;
-	    };
+              inherit inputs;
+            };
           };
         }
       ];

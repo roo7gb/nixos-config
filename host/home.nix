@@ -1,6 +1,6 @@
 # home.nix
 
-{ config, lib, pkgs, inputs, ... }: {
+{ pkgs, inputs, ... }: {
 
   home.username = "roo7gb";
   home.homeDirectory = "/home/roo7gb";

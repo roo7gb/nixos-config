@@ -1,6 +1,6 @@
 # rofi.nix
 
-{ config, lib, pkgs, ... }:
+{ config, pkgs, ... }:
 
 let
   inherit (config.lib.formats.rasi) mkLiteral;
@@ -26,12 +26,12 @@ in
 
       "window" = {
         anchor = mkLiteral "west";
-	location = mkLiteral "west";
-	height = mkLiteral "100%";
-	width = mkLiteral "300px";
-	x-offset = mkLiteral "0px";
-	y-offset = mkLiteral "0px";
-	children = map mkLiteral [ "mainbox" ];
+        location = mkLiteral "west";
+        height = mkLiteral "100%";
+        width = mkLiteral "300px";
+        x-offset = mkLiteral "0px";
+        y-offset = mkLiteral "0px";
+        children = map mkLiteral [ "mainbox" ];
       };
 
       "mainbox" = {
@@ -41,7 +41,7 @@ in
 
       "inputbar" = {
         padding = mkLiteral "12px";
-	children = map mkLiteral [ "prompt" "entry" ];
+        children = map mkLiteral [ "prompt" "entry" ];
       };
 
       "prompt" = {
@@ -56,21 +56,21 @@ in
 
       "listview" = {
         columns = 1;
-	lines = 12;
-	spacing = mkLiteral "4px";
-	cycle = false;
-	dynamic = true;
-	layout = mkLiteral "vertical";
+        lines = 12;
+        spacing = mkLiteral "4px";
+        cycle = false;
+        dynamic = true;
+        layout = mkLiteral "vertical";
       };
 
       "element" = {
         padding = mkLiteral "8px 12px";
-	spacing = mkLiteral "8px";
-	border-radius = mkLiteral "4px";
+        spacing = mkLiteral "8px";
+        border-radius = mkLiteral "4px";
       };
 
       "element-text" = {
-	vertical-align = mkLiteral "0.5";
+        vertical-align = mkLiteral "0.5";
       };
 
       "element-icon" = {

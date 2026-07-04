@@ -1,6 +1,6 @@
 # fastfetch.nix
 
-{ config, lib, pkgs, ... }: {
+{ ... }: {
 
   # - CONFIG ------------------ #
   programs.fastfetch = {
@@ -12,7 +12,7 @@
         height = 25;
         padding = {
           right = 1;
-	};
+        };
       };
       display = {
         separator = " ";
@@ -20,83 +20,83 @@
       modules = [
         {
           type = "title";
-	  format = "{#1}╭───────────── {#}{user-name-colored}";
-	}
-        {
-	  type = "custom";
-	  format = "{#1}│ {#}System Information";
-	}
-        {
-          type = "os";
-	  key = "{#separator}│  {#keys}󰍹 OS";
-	  format = "{2} btw 󱄅 ";
+          format = "{#1}╭───────────── {#}{user-name-colored}";
         }
         {
-	  type = "kernel";
-	  key = "{#separator}│  {#keys}󰒋 Kernel";
-	}
-	{
-	  type = "uptime";
-	  key = "{#separator}│  {#keys}󰅐 Uptime";
-	}
-	{
-	  type = "custom";
-	  format = "{#1}│";
-	}
-	{
-	  type = "custom";
-	  format = "{#1}│ {#}Desktop Environment";
-	}
+          type = "custom";
+          format = "{#1}│ {#}System Information";
+        }
         {
-	  type = "wm";
-	  key = "{#separator}│  {#keys}󱂬 WM";
-	}
-	{
-	  type = "display";
-	  key = "{#separator}│  {#keys}󰹑 Resolution";
-	}
-	{
-	  type = "shell";
-	  key = "{#separator}│  {#keys}󰞷 Shell";
-	}
+          type = "os";
+          key = "{#separator}│  {#keys}󰍹 OS";
+          format = "{2} btw 󱄅 ";
+        }
         {
-	  type = "custom";
-	  format = "{#1}│";
-	}
-	{
-	  type = "custom";
-	  format = "{#1}│ {#}Hardware Information";
-	}
+          type = "kernel";
+          key = "{#separator}│  {#keys}󰒋 Kernel";
+        }
         {
-	  type = "cpu";
-	  key = "{#separator}│  {#keys}󰻠 CPU";
-	}
+          type = "uptime";
+          key = "{#separator}│  {#keys}󰅐 Uptime";
+        }
         {
-	  type = "gpu";
-	  key = "{#separator}│  {#keys}󰢮 GPU";
-	}
+          type = "custom";
+          format = "{#1}│";
+        }
         {
-	  type = "memory";
-	  key = "{#separator}│  {#keys}󰍛 Memory";
-	}
+          type = "custom";
+          format = "{#1}│ {#}Desktop Environment";
+        }
         {
-	  type = "disk";
-	  key = "{#separator}│  {#keys}󰋊 Disk ({mountpoint})";
-	  folders = "/:/home:/mnt/bstor";
-	}
+          type = "wm";
+          key = "{#separator}│  {#keys}󱂬 WM";
+        }
         {
-	  type = "custom";
-	  format = "{#1}│";
-	}
-	{
+          type = "display";
+          key = "{#separator}│  {#keys}󰹑 Resolution";
+        }
+        {
+          type = "shell";
+          key = "{#separator}│  {#keys}󰞷 Shell";
+        }
+        {
+          type = "custom";
+          format = "{#1}│";
+        }
+        {
+          type = "custom";
+          format = "{#1}│ {#}Hardware Information";
+        }
+        {
+          type = "cpu";
+          key = "{#separator}│  {#keys}󰻠 CPU";
+        }
+        {
+          type = "gpu";
+          key = "{#separator}│  {#keys}󰢮 GPU";
+        }
+        {
+          type = "memory";
+          key = "{#separator}│  {#keys}󰍛 Memory";
+        }
+        {
+          type = "disk";
+          key = "{#separator}│  {#keys}󰋊 Disk ({mountpoint})";
+          folders = "/:/home:/mnt/bstor";
+        }
+        {
+          type = "custom";
+          format = "{#1}│";
+        }
+        {
           type = "colors";
-	  key = "{#separator}│";
-	  symbol = "circle";
-	}
-	{
-	  type = "custom";
-	  format = "{#1}╰───────────────────────────────╯";
-	}
+          key = "{#separator}│";
+          symbol = "circle";
+        }
+        {
+          type = "custom";
+          format = "{#1}╰───────────────────────────────╯";
+        }
       ];
     };
   };

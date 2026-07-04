@@ -1,6 +1,6 @@
 # hyprland.nix
 
-{ config, lib, pkgs, ... }: {
+{ ... }: {
 
   # - IMPORTS ---------- #
   imports = [

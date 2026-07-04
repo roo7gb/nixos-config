@@ -1,6 +1,6 @@
 # spotify-player.nix
 
-{ config, lib, pkgs, ... }: {
+{ ... }: {
 
   # - CONFIG ------------------ #
   programs.spotify-player = {

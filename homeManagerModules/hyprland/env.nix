@@ -36,7 +36,7 @@
     }
     {
       _args = [
-	"XCURSOR_THEME"
+        "XCURSOR_THEME"
         "phinger-cursors-dark"
       ];
     }

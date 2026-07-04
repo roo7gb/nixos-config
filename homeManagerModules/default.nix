@@ -1,6 +1,7 @@
 # default.nix
 
-{ config, lib, pkgs, ... }: {
+{ ... }: {
+
   imports = [
     ./git.nix
     ./hyprlock.nix

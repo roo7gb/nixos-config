@@ -1,6 +1,6 @@
 # waybar.nix
 
-{ config, lib, pkgs, ... }: {
+{ ... }: {
 
   # - CONFIG ------------------ #
   programs.waybar = {
@@ -117,17 +117,17 @@
     };
     style = ''
     * {
-        font-family: "Agave Nerd Font", monospace;
-	font-weight: 500;
-	font-size: 14px;
-	color: #f2f4f8;
+      font-family: "Agave Nerd Font", monospace;
+      font-weight: 500;
+      font-size: 14px;
+      color: #f2f4f8;
     }
 
     #waybar {
-        background: #282828;
-	box-shadow: none;
-	border: none;
-        padding: 6px 12px;
+      background: #282828;
+      box-shadow: none;
+      border: none;
+      padding: 6px 12px;
     }
 
     #waybar .module {

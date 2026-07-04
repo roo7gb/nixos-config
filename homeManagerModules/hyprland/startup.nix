@@ -12,7 +12,7 @@
           hl.exec_cmd("hyprctl setcursor phinger-cursors-dark 24")
           hl.exec_cmd("systemctl --user start hyprpolkitagent")
           hl.exec_cmd("awww-daemon")
-	  hl.exec_cmd("hyprlock")
+          hl.exec_cmd("hyprlock")
         end'')
     ];
   };

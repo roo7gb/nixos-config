@@ -1,6 +1,6 @@
 # nvim.nix
 
-{ config, lib, pkgs, ... }: {
+{ ... }: {
 
   # - NEOVIM ------------------ #
   programs.neovim = {

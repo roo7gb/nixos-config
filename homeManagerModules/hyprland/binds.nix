@@ -53,7 +53,7 @@
         }
 
         # - OPEN APPS --------- #
-	## open terminal
+        ## open terminal
         {
           keys = "SUPER + RETURN";
           dispatcher = ''hl.dsp.exec_cmd("wezterm")'';
@@ -241,8 +241,8 @@
           flags.description = "Move window right";
         }
         ## move up
-	{
-	  keys = "SUPER + CTRL + up";
+        {
+          keys = "SUPER + CTRL + up";
           dispatcher = ''hl.dsp.window.move({ direction = "u" })'';
           flags.description = "Move window up";
         }
@@ -376,14 +376,14 @@
           flags.description = "Move window to workspace 10";
         }
 
-	## silent move window to workspace 1
+        ## silent move window to workspace 1
         {
           keys = "SUPER + SHIFT + 1";
           dispatcher = ''hl.dsp.window.move({ workspace = 1, follow = false })'';
           flags.description = "Silent move window to workspace 1";
         }
 
-	## silent move window to workspace 2
+        ## silent move window to workspace 2
         {
           keys = "SUPER + SHIFT + 2";
           dispatcher = ''hl.dsp.window.move({ workspace = 2, follow = false })'';

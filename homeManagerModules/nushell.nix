@@ -1,6 +1,6 @@
 # nushell.nix
 
-{ config, lib, pkgs, ... }: {
+{ ... }: {
 
   # - NU CONFIG --------------- #
   programs.nushell = {
@@ -12,18 +12,18 @@
     extraConfig = ''
       $env.config = {
         show_banner: false,
-	completions: {
-	  case_sensitive: false
-	  quick: true
-	  partial: true
-	  algorithm: "fuzzy"
-	  external: {
+        completions: {
+          case_sensitive: false
+          quick: true
+          partial: true
+          algorithm: "fuzzy"
+          external: {
             max_results: 100
-	  }
+          }
         }
       }
       fastfetch --logo-type kitty --logo-recache --logo-height 15 --logo "~/.nixflake/etc/yakumOS.png"
-    '';
+      '';
   };
 
   # - STARSHIP CONFIG --------- #
@@ -39,7 +39,7 @@
       };
       time = {
         disabled = false;
-	time_format = "%r";
+        time_format = "%r";
         style = "bg:#eac67e";
         format = "[[ 󱑍 $time ](bg:#d6b471 fg:#282828)]($style)";
       };
@@ -56,21 +56,21 @@
       };
       hostname = {
         ssh_only = false;
-	format = "on [$hostname](#33b1ff)";
-	disabled = false;
+        format = "on [$hostname](#33b1ff)";
+        disabled = false;
       };
       directory = {
         truncation_length = 3;
-	fish_style_pwd_dir_length = 2;
-	home_symbol = "󰋜 ~";
-	read_only_style = "197";
-	read_only = "  ";
+        fish_style_pwd_dir_length = 2;
+        home_symbol = "󰋜 ~";
+        read_only_style = "197";
+        read_only = "  ";
         format = " at [$path]($style)[$read_only]($read_only_style) ";
       };
       git_branch = {
         symbol = " ";
-	format = "[$symbol$branch]($style)";
-	truncation_symbol = ".../";
+        format = "[$symbol$branch]($style)";
+        truncation_symbol = ".../";
         style = "#a6e3a1";
       };
       git_status = {
@@ -99,9 +99,9 @@
       lua.symbol = " ";
       memory_usage = {
         symbol = "󰍛 ";
-	disabled = true;
-	style = "#ee5396";
-	threshold = 1;
+        disabled = true;
+        style = "#ee5396";
+        threshold = 1;
         format = "$symbol [$ram(|$swap)]($style) ";
       };
       nodejs.symbol = " ";

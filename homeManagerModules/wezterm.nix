@@ -1,6 +1,6 @@
 # wezterm.nix
 
-{ config, lib, ... }: {
+{ ... }: {
 
   # - CONFIG ------------------ #
   programs.wezterm = {

@@ -1,6 +1,6 @@
 # git.nix
 
-{ config, lib, pkgs, ... }: {
+{ ... }: {
 
   # - CONFIG ------------------ #
   programs.git = {

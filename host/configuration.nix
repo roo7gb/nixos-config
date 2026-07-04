@@ -96,7 +96,7 @@
     settings = rec {
       initial_session = {
         command = "${pkgs.hyprland}/bin/start-hyprland";
-	user = "roo7gb";
+        user = "roo7gb";
       };
       default_session = initial_session;
     };
