@@ -4,19 +4,22 @@
 
 { config, pkgs, ... }: {
 
+  # - MODULE IMPORTS ---------- #
   imports =
-    [ # Include the results of the hardware scan.
+    [
       ./hardware-configuration.nix
       ../nixosModules
     ];
 
-  # Bootloader.
+  # - BOOT -------------------- #
+  # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # Use latest kernel.
+  # Kernel (latest)
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
+  # - NETWORKING -------------- #
   networking.hostName = "TARDIS"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -36,6 +39,7 @@
   # DNS services
   services.resolved.enable = true;
 
+  # - SYSTEM SETTINGS --------- #
   # Set your time zone.
   time.timeZone = "America/New_York";
 
@@ -60,15 +64,16 @@
     variant = "";
   };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  # - USER -------------------- #
   users.users."roo7gb" = {
     isNormalUser = true;
     description = "Root Goldberg";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    packages = []; # all user packages are configured in home-manager.
     shell = pkgs.nushell;
   };
 
+  # - GRAPHICS ---------------- #
   # Enable OpenGL
   hardware.graphics = {
     enable = true;
@@ -85,11 +90,7 @@
     nvidiaSettings = true;
   };
 
-  # force wayland in electron
-  environment.sessionVariables = {
-    NIX_OZONE_WL = "1";
-  };
-
+  # - DESKTOP ----------------- #
   # Enable greetd
   services.greetd = {
     enable = true;
@@ -102,6 +103,7 @@
     };
   };
 
+  # Enable hyprland
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
@@ -119,6 +121,12 @@
   # allow hyprlock to auth
   security.pam.services.hyprlock = {};
 
+  # force wayland in electron
+  environment.sessionVariables = {
+    NIX_OZONE_WL = "1";
+  };
+
+  # - AUDIO ------------------- #
   # enable pipewire
   security.rtkit.enable = true;
   services.pipewire = {
@@ -128,6 +136,7 @@
     pulse.enable = true;
   };
 
+  # - PACKAGE SETTINGS -------- #
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -135,16 +144,6 @@
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
-  ];
-
-  # List packages installed in system profile.
-  # GLOBAL PACKAGES!!!
-  environment.systemPackages = with pkgs; [
-    vim
-    wget
-    cliphist
-    home-manager
-    nwg-hello
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -173,5 +172,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "26.05"; # Did you read the comment?
-
 }
