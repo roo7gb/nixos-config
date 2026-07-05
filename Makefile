@@ -1,7 +1,7 @@
 # Project makefile
 
 # declare targets as phony
-.PHONY: build clean-home clean-all
+.PHONY: build upgrade clean-home clean-all
 
 # build flake
 build:
