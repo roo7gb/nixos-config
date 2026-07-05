@@ -7,6 +7,7 @@
     vim      # text editor if nvim is borked
     wget     # downloader
     cliphist # clipboard
+    gnumake  # make command
     # git
   ];
 }
