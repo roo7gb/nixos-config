@@ -7,6 +7,10 @@
 build:
 	sudo nixos-rebuild switch --flake .
 
+# build and upgrade
+upgrade:
+	sudo nixos-rebuild switch --upgrade --flake .
+
 # clean file fragments (except for previous builds and dependencies)
 clean-home:
 	nix-collect-garbage -d
