@@ -9,6 +9,7 @@
     ./fastfetch.nix      # sysinfo fetcher config
     ./mako.nix           # notification daemon config
     ./nvim.nix           # neovim config
+    ./quickshell.nix     # quickshell config (config files in ./quickshell/)
     ./rofi.nix           # app launcher config
     ./spotify-player.nix # spotify config
     ./stylix.nix         # stylix config for apps

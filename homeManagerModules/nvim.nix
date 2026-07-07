@@ -45,7 +45,7 @@
           # lua.enable = true;
           # make.enable = true;
           # python.enable = true;
-          # qml.enable = true;
+          qml.enable = true;
           # rust.enable = true;
           # sql.enable = true;
           # toml.enable = true;

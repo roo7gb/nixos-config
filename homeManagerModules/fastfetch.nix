@@ -8,7 +8,7 @@
     settings = {
       logo = {
         type = "kitty-direct";
-        source = "/home/roo7gb/.nixflake/etc/yakumOS.png";
+        source = "$(ls ~/.nixflake/etc/ff_logos/*.png | shuf -n 1)";
         height = 25;
         padding = {
           right = 1;
