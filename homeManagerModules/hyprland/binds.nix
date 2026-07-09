@@ -76,7 +76,7 @@
         ## open app launcher
         {
           keys = "SUPER + SUPER_L";
-          dispatcher = ''hl.dsp.exec_cmd("rofi -show drun -show-icons")'';
+          dispatcher = ''hl.dsp.exec_cmd("qs ipc call launcher toggle")'';
           flags.description = "Open application launcher";
         }
 
