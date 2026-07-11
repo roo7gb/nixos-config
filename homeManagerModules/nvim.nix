@@ -2,11 +2,6 @@
 
 { ... }: {
 
-  # - NEOVIM ------------------ #
-  programs.neovim = {
-    enable = true;
-  };
-
   # - NVF --------------------- #
   programs.nvf = {
     enable = true;
