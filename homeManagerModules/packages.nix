@@ -11,6 +11,7 @@
     hyprpolkitagent      # polkit agent
     imagemagick          # cli image processing
     nerd-fonts.agave     # my favorite nerd font
+    obsidian             # note text editor
     pavucontrol          # audio control interface
     playerctl            # audio player control
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default # browser

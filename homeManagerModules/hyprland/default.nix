@@ -16,6 +16,7 @@
     ./binds.nix
     ./layerrules.nix
     ./windowrules.nix
+    ./workspace.nix
   ];
 
   # - HYPRLAND --------- #
