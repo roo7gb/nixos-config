@@ -14,6 +14,7 @@
     obsidian             # note text editor
     pavucontrol          # audio control interface
     playerctl            # audio player control
+    protonvpn-gui
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default # browser
   ];
 }
