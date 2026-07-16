@@ -17,7 +17,7 @@
     ./stylix.nix         # stylix config for apps
     ./thunderbird.nix    # email client config
     ./vesktop.nix        # discord config
-    ./wezterm.nix        # terminal config
+    # ./wezterm.nix        # terminal config
     ./yazi.nix           # file explorer config
     ./hyprland           # hyprland config (directory)
     ./packages.nix       # non-configured packages

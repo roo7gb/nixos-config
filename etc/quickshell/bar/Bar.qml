@@ -12,7 +12,7 @@ Scope {
   id: root
 
   property var theme: BarTheme {}
-  property string font: "Agave Nerd Font"
+  property string font: "Mononoki Nerd Font"
   property bool barVisible: true
 
   //mpris active player

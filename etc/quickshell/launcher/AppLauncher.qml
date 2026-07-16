@@ -9,7 +9,7 @@ import QtQuick.Layouts
 Scope {
   id: root
   property var theme: LauncherTheme {}
-  property string font: "Agave Nerd Font"
+  property string font: "Mononoki Nerd Font"
 
   IpcHandler {
     target: "launcher"

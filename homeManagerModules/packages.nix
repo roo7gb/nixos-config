@@ -10,7 +10,7 @@
     git-credential-oauth # git credential helper
     hyprpolkitagent      # polkit agent
     imagemagick          # cli image processing
-    nerd-fonts.agave     # my favorite nerd font
+    nerd-fonts.mononoki  # friendship ended with agave this is my new favorite nerd font
     obsidian             # note text editor
     pavucontrol          # audio control interface
     playerctl            # audio player control

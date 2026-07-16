@@ -8,7 +8,7 @@ import QtQuick.Layouts
 Scope {
   id: root
   property var theme: OSDTheme {}
-  property string font: "Agave Nerd Font"
+  property string font: "Mononoki Nerd Font"
 
   property bool showVolume: false
   property bool showBrightness: false

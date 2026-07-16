@@ -10,6 +10,7 @@
     gnumake    # make command
     lm_sensors # temp sensors
     conf-fastfetch
+    conf-wezterm
     # git
   ];
 }
