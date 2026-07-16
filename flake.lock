@@ -75,11 +75,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1784164746,
-        "narHash": "sha256-r0u+dSp9mRATZOtWjqrsVcOIAJ8vPqKgCwfL7VeLiY4=",
+        "lastModified": 1784170240,
+        "narHash": "sha256-Im5nDmyY4W9oxPTkKPM9UcA0cS7LGdTrA69E2OvsOow=",
         "owner": "roo7gb",
         "repo": "nix-wrapper-overlays",
-        "rev": "7b6ea4c1fef3226ec2d6adb2b78742f10ee2a6d0",
+        "rev": "f3fd02abc4270ab0341561d84d159db83833f68b",
         "type": "github"
       },
       "original": {

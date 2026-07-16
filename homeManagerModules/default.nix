@@ -7,7 +7,7 @@
     ./cava.nix           # cava config
     # ./fastfetch.nix      # sysinfo fetcher config
     ./git.nix            # git config
-    ./hyprlock.nix       # lockscreen config
+    # ./hyprlock.nix       # lockscreen config
     ./hyprshot.nix       # screenshot util config
     ./nushell.nix        # shell config
     ./nvim.nix           # neovim config

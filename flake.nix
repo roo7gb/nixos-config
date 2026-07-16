@@ -36,7 +36,7 @@
          nixpkgs.overlays = with config-overlays; [
             overlays.conf-fastfetch
         #    overlays.conf-hyprland
-        #    overlays.conf-hyprlock
+            overlays.conf-hyprlock
         #    overlays.conf-nushell
             overlays.conf-wezterm
           ];

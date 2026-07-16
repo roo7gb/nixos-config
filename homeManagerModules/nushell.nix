@@ -7,7 +7,7 @@
     enable = true;
     shellAliases = {
       v = "nvim";
-      ff = ''fastfetch --logo-type kitty --logo-recache --logo-height 15 --logo "~/.nixflake/etc/ff_logos/*png"'';
+      ff = ''fastfetch --logo-type kitty --logo-recache --logo-height 15 --logo "~/.nixflake/etc/ff_logos/yakumOS.png"'';
     };
     extraConfig = ''
       $env.config = {
@@ -22,7 +22,8 @@
           }
         }
       }
-      fastfetch --logo-type kitty --logo-recache --logo-height 15 --logo "~/.nixflake/etc/ff_logos/*png"
+      sleep 0.2sec
+      fastfetch --logo-type kitty --logo-recache --logo-height 15 --logo "~/.nixflake/etc/ff_logos/yakumOS.png"
       '';
   };
 
