@@ -5,7 +5,7 @@
   imports = [
     ./btop.nix           # btop config
     ./cava.nix           # cava config
-    ./fastfetch.nix      # sysinfo fetcher config
+    # ./fastfetch.nix      # sysinfo fetcher config
     ./git.nix            # git config
     ./hyprlock.nix       # lockscreen config
     ./hyprshot.nix       # screenshot util config

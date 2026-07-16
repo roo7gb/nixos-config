@@ -21,13 +21,26 @@
       url = "github:NotAShelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    config-overlays = {
+      url = "github:roo7gb/nix-wrapper-overlays";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, stylix, nvf, ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, stylix, nvf, config-overlays, ... }: {
     nixosConfigurations.TARDIS = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         ./host/configuration.nix
+        {
+         nixpkgs.overlays = with config-overlays; [
+           overlays.conf-fastfetch
+        #    overlays.conf-hyprland
+        #    overlays.conf-hyprlock
+        #    overlays.conf-nushell
+        #    overlays.conf-wezterm
+          ];
+        }
         stylix.nixosModules.stylix
         home-manager.nixosModules.home-manager {
           home-manager = {
