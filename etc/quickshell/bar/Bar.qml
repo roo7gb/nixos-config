@@ -2,6 +2,7 @@ import Quickshell
 import QtQuick
 import QtQuick.Layouts
 import Quickshell.Hyprland
+import Quickshell.Wayland
 import Quickshell.Widgets
 import Quickshell.Services.SystemTray
 import Quickshell.Io
@@ -88,6 +89,8 @@ Scope {
       required property var modelData
       screen: modelData
       visible: root.barVisible
+
+      WlrLayershell.namespace: "quickshell-bar"
 
       anchors {
         top: true
