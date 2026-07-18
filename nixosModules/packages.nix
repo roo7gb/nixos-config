@@ -12,6 +12,7 @@
     conf-fastfetch
     conf-hyprlock
     conf-wezterm
+    concord-tui
     # git
   ];
 }
