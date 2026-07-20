@@ -1,6 +1,6 @@
 # .nixflake/modules/system/core/default.nix
 
-{ self, inputs, modulesPath, ... }: {
+{ self, inputs, ... }: {
 
   flake.nixosModules.core = { pkgs, lib, ... }: let
 
@@ -12,7 +12,7 @@
       locale
     ];
   in {
-    imports = [ /etc/nixos/hardware-configuration.nix ] ++ modules;
+    imports = modules ++ [ ./hardware-configuration.nix ];
     services = {
       openssh.enable = true;
       avahi.enable = true;

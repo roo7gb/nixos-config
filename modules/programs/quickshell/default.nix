@@ -13,8 +13,8 @@
   perSystem = { pkgs, ... }: {
     packages.quickshell = inputs.wrappers.wrappers.quickshell.wrap {
       inherit pkgs;
-      configDir = ./quickshell;
-      configFile = ./quickshell/shell.qml;
+      configDir = inputs.quickshell;
+      configFile = "${inputs.quickshell}/shell.qml";
     };
   };
 }

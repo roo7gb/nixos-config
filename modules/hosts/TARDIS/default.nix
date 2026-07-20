@@ -9,7 +9,6 @@
       tardisConfiguration
       nvidiaDrivers
       nix-ld
-      phCursors
       development
       gaming
       fastfetch

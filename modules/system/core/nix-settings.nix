@@ -18,11 +18,25 @@
           "flakes"
         ];
       };
+      nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+      optimise.automatic = true;
+      gc = {
+        automatic = true;
+        dates = "daily";
+        options = "--delete-older-than 5d";
+      };
     };
 
     nixpkgs = {
       config = {
         allowUnfree = true;
+        packageOverrides = pkgs: {
+          unstable = import inputs.nixpkgs-unstable {
+            config = {
+              allowUnfree = true;
+            };
+          };
+        };
       };
     };
   };

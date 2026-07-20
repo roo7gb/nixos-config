@@ -7,7 +7,6 @@
 
       modules = with self.nixosModules; [
         core
-        audio
         hyprland
         greetd
         network

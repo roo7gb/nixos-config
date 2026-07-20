@@ -22,12 +22,16 @@
       };
       services.xserver.enable = true;
       security.polkit.enable = true;
-      system.activationScripts.hyprRuntimeEnv = lib.stringAfter ["specialfs"] ''
+      system.activationScripts.hyprRuntimeEnv = lib.stringAfter [ "specialfs" ] ''
         mkdir -p /run/hypr-runtime-env/bin
         ${lib.concatStringsSep "\n" (lib.mapAttrsToList (name: pkg: ''
             ln -sfn ${runtimeTarget name pkg} /run/hypr-runtime-env/bin/${name}
           '')
         runtimePkgs)}
+      '';
+      system.activationScripts.hyprConfig = lib.stringAfter [ "specialfs" ] ''
+        mkdir -p /run/hypr/config
+        ln -sfn ${inputs.hyprland-config}/* /run/hypr/config
       '';
     }
   );
