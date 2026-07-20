@@ -12,7 +12,7 @@
       locale
     ];
   in {
-    imports = modules ++ [ ./hardware-configuration.nix ];
+    imports = modules ++ [ ./_hardware-configuration.nix ];
     services = {
       openssh.enable = true;
       avahi.enable = true;
