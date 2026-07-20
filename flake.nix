@@ -10,6 +10,9 @@
     # hyprland setup
     hyprland.url = "github:roo7gb/hypr";
 
+    # neovim setup
+    nvim.url = "github:roo7gb/nvim";
+
     # web browser of choice
     zen-browser = {
       url = "github:youwen5/zen-browser-flake";
