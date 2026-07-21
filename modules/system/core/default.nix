@@ -19,6 +19,7 @@
     };
     environment.systemPackages = with pkgs; [
       vim
+      lsd
       unzip
       p7zip-rar
       usbutils
