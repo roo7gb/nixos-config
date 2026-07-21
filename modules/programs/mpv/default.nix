@@ -13,6 +13,7 @@
 
   perSystem = { pkgs, ... }: {
     packages.mpv-unwrapped = inputs.wrappers.wrappers.mpv.wrap {
+      inherit pkgs;
       script = {
         modernz = {
           path = pkgs.mpvScripts.modernz;

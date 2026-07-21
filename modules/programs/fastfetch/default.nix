@@ -3,7 +3,7 @@
 { inputs, moduleWithSystem, ... }: {
 
   flake.nixosModules.fastfetch = moduleWithSystem (
-    { self' }: {
+    { self', ... }: {
       environment.systemPackages = with self'.packages; [
         fastfetch
       ];
@@ -12,6 +12,8 @@
 
   perSystem = { pkgs, ... }: {
     packages.fastfetch = inputs.wrappers.wrappers.fastfetch.wrap {
+      inherit pkgs;
+      package = pkgs.fastfetch;
       settings = {
         # pad logo by 1 px
         logo = {

@@ -1,7 +1,7 @@
 # .nixflake/modules/programs/hyprland/default.nix
 
 { moduleWithSystem, self, inputs, ... }: {
-  flake.nixosMosules.hyprland = moduleWithSystem (
+  flake.nixosModules.hyprland = moduleWithSystem (
     { self', pkgs, inputs', ... }: { config, ... }: let
       modules = with self.nixosModules; [
         audio

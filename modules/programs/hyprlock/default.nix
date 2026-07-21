@@ -12,6 +12,7 @@
 
   perSystem = { pkgs, ... }: {
     packages.hyprlock = inputs.wrappers.wrappers.hyprlock.wrap {
+      inherit pkgs;
       "hyprlock.conf".path = ./hyprlock.conf;
     };
   };

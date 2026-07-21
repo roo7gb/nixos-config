@@ -13,6 +13,7 @@
 
   perSystem = { pkgs, ... }: {
     packages.wezterm = inputs.wrappers.wrappers.wezterm.wrap {
+      inherit pkgs;
       "wezterm.lua".path = ./wezterm.lua;
     };
   };

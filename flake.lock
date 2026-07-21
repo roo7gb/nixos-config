@@ -161,11 +161,11 @@
         "zen-browser": "zen-browser"
       },
       "locked": {
-        "lastModified": 1784581594,
-        "narHash": "sha256-FIhHxHCnys6P3R3M8a7+srKT2f2Zaqw+W5oyKb2rwWA=",
+        "lastModified": 1784590718,
+        "narHash": "sha256-hUU7kas/751vJiY8BQBl9iqiNONtbM3D9TkbpyQG2eY=",
         "owner": "roo7gb",
         "repo": "hypr",
-        "rev": "82c36da3e5b5425a2cbacad5752af0f0695cb28c",
+        "rev": "a85eac1b9a84f0ae39cb1046bb9f9c1825bb8ffd",
         "type": "github"
       },
       "original": {
@@ -177,11 +177,11 @@
     "hyprland-config": {
       "flake": false,
       "locked": {
-        "lastModified": 1784581594,
-        "narHash": "sha256-FIhHxHCnys6P3R3M8a7+srKT2f2Zaqw+W5oyKb2rwWA=",
+        "lastModified": 1784590718,
+        "narHash": "sha256-hUU7kas/751vJiY8BQBl9iqiNONtbM3D9TkbpyQG2eY=",
         "owner": "roo7gb",
         "repo": "hypr",
-        "rev": "82c36da3e5b5425a2cbacad5752af0f0695cb28c",
+        "rev": "a85eac1b9a84f0ae39cb1046bb9f9c1825bb8ffd",
         "type": "github"
       },
       "original": {
