@@ -28,6 +28,8 @@
         zshAliases = {
           v = lib.getExe self'.packages.nvim;
           carapace = lib.getExe pkgs.carapace;
+          ff = "fastfetch --logo-type kitty --logo-recache --logo-height 15 --logo ~/.nixflake/etc/ff_logos/yakumOS.png";
+          yolo = ''${lib.getExe self'.packages.git} add . && ${lib.getExe self'.packages.git} commit -m "$(curl -fsSL https://whatthecommit.com/index.txt)" -m '(auto-msg whatthecommit.com)' -m "$(${lib.getExe self'.packages.git} status)" && ${lib.getExe self'.packages.git} push'';
           nsh = "nix-shell -p";
         };
         zshrc.content = ''
@@ -37,7 +39,7 @@
             zle -N zle-line-init
             zle -N zle-line-finish
           fi
-          autoload -U compinit && compinit
+          autoload -Uz compinit && compinit
           export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
           zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
           source <(${lib.getExe pkgs.carapace} _carapace)
@@ -45,6 +47,8 @@
 
           autoload -U select-word-style
           select-word-style bash
+
+          ZSH_HIGHLIGHT_STYLES[path]='none'
 
           autoload -U up-line-or-beginning-search down-line-or-beginning-search
           zle -N up-line-or-beginning-search
@@ -67,6 +71,7 @@
           eval "$(${lib.getExe self'.packages.ohMyPosh} init zsh)"
 
           ${lib.getExe pkgs.any-nix-shell} zsh --info-right | source /dev/stdin
+          fastfetch --logo-type kitty --logo-recache --logo-height 15 --logo ~/.nixflake/etc/ff_logos/yakumOS.png
         '';
       };
       ohMyPosh = inputs.wrappers.wrappers.oh-my-posh.wrap {

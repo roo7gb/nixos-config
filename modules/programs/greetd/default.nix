@@ -8,7 +8,7 @@
       enable = true;
       settings = rec {
         initial_session = {
-          command = "${pkgs.hyprland}/bin/start_hyprland";
+          command = "Hyprland";
           user = "roo7gb";
         };
         default_session = initial_session;

@@ -5,10 +5,9 @@
   flake.nixosModules.nvim = moduleWithSystem (
     { self', ... }: {
 
-      programs.neovim = {
-        enable = true;
-        package = self'.packages.nvim;
-      };
+      environment.systemPackages = with self'.packages; [
+        nvim
+      ];
     }
   );
   perSystem = { inputs', ... }: {

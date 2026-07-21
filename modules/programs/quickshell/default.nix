@@ -2,10 +2,9 @@
 
 { moduleWithSystem, inputs, ... }: {
   flake.nixosModules.quickshell = moduleWithSystem (
-    { self', ... }: {
+    { self', pkgs, ... }: {
       environment.systemPackages = with self'.packages; [
         quickshell
-        lm_sensors
       ];
     }
   );

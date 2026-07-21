@@ -26,6 +26,7 @@
       libnotify
       curlWithGnuTls
       wget
+      lm_sensors
     ];
     system.stateVersion = "26.05";
   };

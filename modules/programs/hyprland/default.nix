@@ -20,6 +20,10 @@
         enable = true;
         package = self'.packages.hyprland;
       };
+      environment.systemPackages = with pkgs; [
+        hyprpolkitagent
+        awww
+      ];
       services.xserver.enable = true;
       security.polkit.enable = true;
       system.activationScripts.hyprRuntimeEnv = lib.stringAfter [ "specialfs" ] ''
@@ -46,6 +50,7 @@
             wezterm = self'.packages.wezterm;
             quickshell = self'.packages.quickshell;
             hyprlock = self'.packages.hyprlock;
+            zen-browser = inputs'.zen-browser.packages.default;
           };
       };
     };
