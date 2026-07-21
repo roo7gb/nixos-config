@@ -30,6 +30,7 @@
           carapace = lib.getExe pkgs.carapace;
           ff = "fastfetch --logo-type kitty --logo-recache --logo-height 15 --logo ~/.nixflake/etc/ff_logos/yakumOS.png";
           yolo = ''${lib.getExe self'.packages.git} add . && ${lib.getExe self'.packages.git} commit -m "$(curl -fsSL https://whatthecommit.com/index.txt)" -m '(auto-msg whatthecommit.com)' -m "$(${lib.getExe self'.packages.git} status)" && ${lib.getExe self'.packages.git} push'';
+          yeet = "rm -rf";
           nsh = "nix-shell -p";
         };
         zshrc.content = ''
