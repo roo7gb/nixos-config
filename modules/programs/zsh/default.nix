@@ -36,35 +36,17 @@
           nsh = "nix-shell -p";
         };
         zshrc.content = ''
-            if (( ''${+terminfo[smkx]} )) && (( ''${+terminfo[rmkx]} )); then
-              function zle-line-init() { echoti smkx }
-          function zle-line-finish() { echoti rmkx }
-          zle -N zle-line-init
-            zle -N zle-line-finish
-            fi
             autoload -U compinit && compinit
             export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
             zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
             source <(${lib.getExe pkgs.carapace} _carapace)
-            zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+            zstyle ':completion:*:git:*' group-order 'main commands' 'alias commands' 'external commands'
 
             autoload -U select-word-style
             select-word-style bash
 
-            autoload -U up-line-or-beginning-search down-line-or-beginning-search
-            zle -N up-line-or-beginning-search
-            zle -N down-line-or-beginning-search
-            bindkey "^[OA" up-line-or-beginning-search
-            bindkey "^[OB" down-line-or-beginning-search
-
-            bindkey "^[[1;5C" forward-word
-            bindkey "^[[1;5D" backward-word
-            bindkey "^[[3;5~" kill-word
-            bindkey "^H" backward-kill-word
-
+            ZSH_HIGHLIGHT_STYLES[path]='none'
             source <(${lib.getExe pkgs.fzf} --zsh)
-
-            setopt NO_CASE_GLOB
 
             export EDITOR=nvim
 
@@ -72,6 +54,7 @@
             eval "$(${lib.getExe self'.packages.ohMyPosh} init zsh)"
 
             ${lib.getExe pkgs.any-nix-shell} zsh --info-right | source /dev/stdin
+            fastfetch --logo-type kitty --logo-recache --logo-height 15 --logo ~/.nixflake/etc/ff_logos/yakumOS.png
         '';
       };
       ohMyPosh = inputs.wrappers.wrappers.oh-my-posh.wrap {
