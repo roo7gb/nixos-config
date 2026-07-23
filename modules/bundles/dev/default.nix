@@ -13,7 +13,6 @@
       imports = modules;
       environment.systemPackages = with pkgs; [
         devenv
-        spotify-player
         gnumake
       ];
     }

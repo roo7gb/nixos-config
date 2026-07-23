@@ -23,6 +23,7 @@
       environment.systemPackages = with pkgs; [
         hyprpolkitagent
         awww
+        spotify-player
       ];
       services.xserver.enable = true;
       security.polkit.enable = true;
