@@ -21,9 +21,6 @@ config.font_rules = {
 config.freetype_load_target = 'Light'
 config.freetype_render_target = 'Light'
 
--- tabs
-config.hide_tab_bar_if_only_one_tab = true
-
 -- window
 config.window_background_opacity = 1.0
 
@@ -85,29 +82,15 @@ config.colors = {
     -- active tab
     active_tab = {
       bg_color = "151515",
-      fg_color = "bcbcbc"
+      fg_color = "d6b471"
     },
 
     -- inactive tab
     inactive_tab = {
-      bg_color = "5c5c5c",
-      fg_color = "bcbcbc"
-    },
-    inactive_tab_hover = {
-      bg_color = "bcbcbc",
-      fg_color = "151515"
+      bg_color = "242424",
+      fg_color = "6965a6"
     },
     inactive_tab_edge = "161616",
-
-    -- new tab
-    new_tab = {
-      bg_color = "5c5c5c",
-      fg_color = "bcbcbc"
-    },
-    new_tab_hover = {
-      bg_color = "bcbcbc",
-      fg_color = "151515"
-    },
   },
 }
 
@@ -138,6 +121,71 @@ config.window_frame = {
   inactive_titlebar_bg = "161616",
   inactive_titlebar_fg = "bcbcbc",
   inactive_titlebar_border_bottom = "5c5c5c"
+}
+
+-- mux
+config.hide_tab_bar_if_only_one_tab = true
+config.tab_bar_at_bottom = true
+config.switch_to_last_active_tab_when_closing_tab = true
+config.tab_max_width = 32
+config.use_fancy_tab_bar = false
+config.show_new_tab_button_in_tab_bar = false
+
+config.leader = {
+  key = 'a',
+  mods = 'CTRL',
+  timeout_milliseconds = 2000,
+}
+config.keys = {
+  {
+    key = '[',
+    mods = 'LEADER',
+    action = wezterm.action.ActivateCopyMode,
+  },
+  {
+    key = 'f',
+    mods = 'ALT',
+    action = wezterm.action.TogglePaneZoomState,
+  },
+  {
+    key = 'c',
+    mods = 'LEADER',
+    action = wezterm.action.SpawnTab 'CurrentPaneDomain',
+  },
+  {
+    key = 'n',
+    mods = 'LEADER',
+    action = wezterm.action.ActivateTabRelative(1),
+  },
+  {
+    key = 'p',
+    mods = 'LEADER',
+    action = wezterm.action.ActivateTabRelative(-1),
+  },
+  {
+    key = ',',
+    mods = 'LEADER',
+    action = wezterm.action.PromptInputLine {
+      description = 'Enter new name for tab...',
+      action = wezterm.action_callback(
+        function(window, pane, line)
+          if line then
+            window:active_tab():set_title(line)
+          end
+        end
+      ),
+    },
+  },
+  {
+    key = 'w',
+    mods = 'LEADER',
+    action = wezterm.action.ShowTabNavigator,
+  },
+  {
+    key = '&',
+    mods = 'LEADER|SHIFT',
+    action = wezterm.action.CloseCurrentTab{ confirm = true },
+  },
 }
 
 return config

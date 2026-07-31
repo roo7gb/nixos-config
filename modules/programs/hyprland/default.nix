@@ -2,7 +2,7 @@
 
 { moduleWithSystem, self, inputs, ... }: {
   flake.nixosModules.hyprland = moduleWithSystem (
-    { self', pkgs, inputs', ... }: { config, ... }: let
+    { self', pkgs, unfreePkgs, inputs', ... }: { config, ... }: let
       modules = with self.nixosModules; [
         audio
         systemTheme
@@ -20,10 +20,11 @@
         enable = true;
         package = self'.packages.hyprland;
       };
-      environment.systemPackages = with pkgs; [
-        hyprpolkitagent
-        awww
-        spotify-player
+      environment.systemPackages = [
+        pkgs.hyprpolkitagent
+        pkgs.awww
+        pkgs.spotify-player
+        unfreePkgs.obsidian
       ];
       services.xserver.enable = true;
       security.polkit.enable = true;
