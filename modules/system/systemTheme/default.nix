@@ -6,6 +6,7 @@
 
     modules = with self.nixosModules; [
       phCursors
+      gtkTheme
     ];
   in {
     imports = modules;

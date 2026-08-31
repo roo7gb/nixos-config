@@ -16,9 +16,12 @@
         else lib.getExe pkg;
     in {
       imports = modules;
-      programs.hyprland = {
-        enable = true;
-        package = self'.packages.hyprland;
+      programs = {
+        hyprland = {
+          enable = true;
+          package = self'.packages.hyprland;
+        };
+        thunar.enable = true;
       };
       environment.systemPackages = [
         pkgs.hyprpolkitagent
@@ -26,7 +29,27 @@
         pkgs.spotify-player
         unfreePkgs.obsidian
       ];
-      services.xserver.enable = true;
+      xdg = {
+        mime = {
+          enable = true;
+        };
+        portal = {
+          enable = true;
+          extraPortals = with pkgs; [
+            xdg-desktop-portal-gtk
+          ];
+          config = {
+            hyprland = {
+              default = [ "hyprland" "gtk" ];
+            };
+          };
+        };
+      };
+      services = {
+        gvfs.enable = true;
+        tumbler.enable = true;
+        xserver.enable = true;
+      };
       security.polkit.enable = true;
       system.activationScripts.hyprRuntimeEnv = lib.stringAfter [ "specialfs" ] ''
         mkdir -p /run/hypr-runtime-env/bin

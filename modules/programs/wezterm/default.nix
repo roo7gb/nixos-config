@@ -3,10 +3,10 @@
 { inputs, moduleWithSystem, ... }: {
 
   flake.nixosModules.wezterm = moduleWithSystem (
-    { self' }: {
-      environment.systemPackages = with self'.packages; [
-        wezterm
-        nerd-fonts.mononoki
+    { self', pkgs, ... }: {
+      environment.systemPackages = [
+        self'.packages.wezterm
+        pkgs.nerd-fonts.mononoki
       ];
     }
   );

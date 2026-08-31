@@ -6,7 +6,11 @@
 
     networking = {
       networkmanager.enable = true;
-      firewall.enable = true;
+      firewall = {
+        enable = true;
+        allowedTCPPorts = [ 42420 ];
+        allowedUDPPorts = [ 42420 ];
+      };
     };
 
     services.resolved.enable = true;

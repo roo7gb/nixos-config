@@ -9,7 +9,7 @@
         enable = true;
         settings = rec {
           initial_session = {
-            command = "${self'.packages.hyprland}/bin/start-hyprland";
+            command = "${self'.packages.niri}/bin/niri-session";
             user = "roo7gb";
           };
           default_session = initial_session;

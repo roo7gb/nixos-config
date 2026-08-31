@@ -5,6 +5,7 @@
   flake.nixosModules.tardisConfiguration = { ... }: {
 
     networking.hostName = "TARDIS";
+    imports = [ ./_hardware-configuration.nix ];
   };
 }
 

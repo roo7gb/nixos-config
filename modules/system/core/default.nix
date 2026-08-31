@@ -12,10 +12,12 @@
       locale
     ];
   in {
-    imports = modules ++ [ ./_hardware-configuration.nix ];
+    imports = modules;
     services = {
       openssh.enable = true;
       avahi.enable = true;
+      power-profiles-daemon.enable = true;
+      upower.enable = true;
     };
     environment.systemPackages = with pkgs; [
       vim

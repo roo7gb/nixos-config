@@ -29,7 +29,7 @@
           ls = lib.getExe pkgs.lsd;
           v = lib.getExe self'.packages.nvim;
           carapace = lib.getExe pkgs.carapace;
-          ff = "fastfetch --logo-type kitty --logo-recache --logo-height 15 --logo ~/.nixflake/etc/ff_logos/yakumOS.png";
+          ff = "fastfetch --logo-type kitty --logo-recache --logo-height 15 --logo ~/.ff_logo.png";
           devenv = lib.getExe pkgs.devenv;
           yolo = ''${lib.getExe self'.packages.git} add . && ${lib.getExe self'.packages.git} commit -m "$(curl -fsSL https://whatthecommit.com/index.txt)" -m '(auto-msg whatthecommit.com)' -m "$(${lib.getExe self'.packages.git} status)" && ${lib.getExe self'.packages.git} push'';
           yeet = "rm -rf";
@@ -54,7 +54,7 @@
             eval "$(${lib.getExe self'.packages.ohMyPosh} init zsh)"
 
             ${lib.getExe pkgs.any-nix-shell} zsh --info-right | source /dev/stdin
-            fastfetch --logo-type kitty --logo-recache --logo-height 15 --logo ~/.nixflake/etc/ff_logos/yakumOS.png
+            fastfetch --logo-type kitty --logo-recache --logo-height 15 --logo ~/.ff_logo.png
         '';
       };
       ohMyPosh = inputs.wrappers.wrappers.oh-my-posh.wrap {

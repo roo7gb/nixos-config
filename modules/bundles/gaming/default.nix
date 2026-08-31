@@ -13,7 +13,10 @@
 
       environment.systemPackages = [
         pkgs.concord-tui
-        pkgs.vesktop
+        (pkgs.vesktop.override {
+          withMiddleClickScroll = true;
+          withSystemVencord = true;
+        })
         pkgs.prismlauncher
         unfreePkgs.vintagestory
       ];

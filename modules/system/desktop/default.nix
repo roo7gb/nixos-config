@@ -7,7 +7,7 @@
 
       modules = with self.nixosModules; [
         core
-        hyprland
+        niri
         greetd
         network
       ];
