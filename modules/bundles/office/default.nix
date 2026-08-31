@@ -3,11 +3,11 @@
 { self, moduleWithSystem, ... }: {
 
   flake.nixosModules.office = moduleWithSystem (
-    { pkgs, ... }: {
+    { pkgs, unfreePkgs, ... }: {
 
-      environment.systemPackages = with pkgs; [
-        libreoffice-fresh
-        obsidian
+      environment.systemPackages = [
+        pkgs.libreoffice-fresh
+        unfreePkgs.obsidian
       ];
     }
   );

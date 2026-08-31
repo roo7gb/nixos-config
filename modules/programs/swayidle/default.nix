@@ -14,7 +14,7 @@
     packages.swayidle = inputs.wrappers.wrappers.swayidle.wrap {
       inherit pkgs;
       events = {
-        before-sleep = "hyprlock --immediate";
+        before-sleep = "hyprlock --no-fade-in";
       };
       timeouts = [
         {

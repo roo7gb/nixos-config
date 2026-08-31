@@ -4,16 +4,22 @@
 .PHONY: build update upgrade clean clean-all
 
 # build flake
-build:
-	sudo nixos-rebuild switch --flake .
+build-TARDIS:
+	sudo nixos-rebuild switch --flake .#TARDIS
+
+build-firefly:
+	sudo nixos-rebuild switch --flake .#FIREFLY
 
 # update
 update:
 	sudo nix flake update
 
 # upgrade
-upgrade: update
-	sudo nixos-rebuild switch --flake .
+upgrade-TARDIS: update
+	sudo nixos-rebuild switch --flake .#TARDIS
+
+upgrade-firefly: update
+	sudo nixos-rebuild switch --flake .#FIREFLY
 
 # clean file fragments (except for previous builds and dependencies)
 clean:

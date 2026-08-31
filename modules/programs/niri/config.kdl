@@ -15,8 +15,19 @@ input {
         repeat-rate 50
         numlock
     }
+    touchpad {
+        tap
+        click-method "clickfinger"
+        natural-scroll
+        scroll-factor 0.5
+    }
     focus-follows-mouse max-scroll-amount="0%"
 }
+
+cursor {
+    xcursor-theme "phinger-cursors-dark"
+    xcursor-size 24
+};
 
 window-rule {
     geometry-corner-radius 10
@@ -37,6 +48,8 @@ window-rule {
     }
 }
 
+prefer-no-csd
+
 blur {
     passes 2
     offset 3.0
@@ -54,6 +67,10 @@ overview {
     }
 }
 
+hotkey-overlay {
+    skip-at-startup
+}
+
 debug {
     honor-xdg-activation-with-invalid-serial
 }
@@ -67,6 +84,10 @@ output "HDMI-A-1" {
     mode "1920x1080@74.973"
     transform "270"
     position x=0 y=0
+}
+
+output "eDP-1" {
+    mode "1920x1080@60.030"
 }
 
 binds {
@@ -143,11 +164,15 @@ binds {
 
     Mod+WheelScrollDown { focus-column-right; }
 
-    Mod+TouchpadScrollDown { focus-column-right; }
+    Mod+TouchpadScrollRight { focus-column-right; }
 
     Mod+WheelScrollUp { focus-column-left; }
 
-    Mod+TouchpadScrollUp { focus-column-left; }
+    Mod+TouchpadScrollLeft { focus-column-left; }
+
+    Mod+TouchpadScrollUp { focus-workspace-up; }
+
+    Mod+TouchpadScrollDown { focus-workspace-down; }
 
     Mod+A { spawn "fuzzel"; }
 

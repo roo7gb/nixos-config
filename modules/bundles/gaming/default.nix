@@ -12,7 +12,6 @@
       imports = modules;
 
       environment.systemPackages = [
-        pkgs.concord-tui
         (pkgs.vesktop.override {
           withMiddleClickScroll = true;
           withSystemVencord = true;

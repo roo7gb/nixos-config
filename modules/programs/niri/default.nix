@@ -31,6 +31,7 @@
         awww
         btop
         brightnessctl
+        spotify-player
         xwayland-satellite
         inputs'.zen-browser.packages.default
       ];
