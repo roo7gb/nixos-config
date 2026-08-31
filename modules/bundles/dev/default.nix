@@ -14,6 +14,7 @@
       environment.systemPackages = with pkgs; [
         devenv
         gnumake
+        opencode
       ];
     }
   );

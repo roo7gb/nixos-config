@@ -28,7 +28,7 @@
         }
     },
     "custom/hardware-wrap": {
-    	  "format": "",
+    	  "format": "",
     	  "tooltip-format": "Resource Usage"
     },
     "group/hardware": {
