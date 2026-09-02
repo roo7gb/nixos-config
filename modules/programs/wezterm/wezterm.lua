@@ -22,7 +22,7 @@ config.freetype_load_target = 'Light'
 config.freetype_render_target = 'Light'
 
 -- window
-config.window_background_opacity = 1.0
+config.window_background_opacity = 0.8
 
 -- colors
 config.colors = {

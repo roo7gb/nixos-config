@@ -12,10 +12,6 @@
       imports = modules;
 
       environment.systemPackages = [
-        (pkgs.vesktop.override {
-          withMiddleClickScroll = true;
-          withSystemVencord = true;
-        })
         pkgs.prismlauncher
         unfreePkgs.vintagestory
       ];

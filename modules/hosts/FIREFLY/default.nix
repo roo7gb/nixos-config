@@ -11,7 +11,6 @@
       nix-ld
       development
       office
-      gaming
       images
       fastfetch
       mpv

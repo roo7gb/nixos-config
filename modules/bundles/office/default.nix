@@ -6,7 +6,7 @@
     { pkgs, unfreePkgs, ... }: {
 
       environment.systemPackages = [
-        pkgs.libreoffice-fresh
+        pkgs.libreoffice-stable
         unfreePkgs.obsidian
       ];
     }

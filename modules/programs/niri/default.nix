@@ -31,7 +31,11 @@
         awww
         btop
         brightnessctl
-        spotify-player
+        spotatui
+        (vesktop.override {
+          withMiddleClickScroll = true;
+          withSystemVencord = true;
+        })
         xwayland-satellite
         inputs'.zen-browser.packages.default
       ];
