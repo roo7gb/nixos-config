@@ -10,6 +10,7 @@
       nvidiaDrivers
       nix-ld
       development
+      office
       gaming
       images
       fastfetch
