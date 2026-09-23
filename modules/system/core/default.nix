@@ -30,6 +30,7 @@
       curlWithGnuTls
       wget
       lm_sensors
+      bluetui
     ];
     system.stateVersion = "26.05";
   };
