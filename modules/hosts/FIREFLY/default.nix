@@ -9,6 +9,7 @@
       fireflyConfiguration
       intelIntDrivers
       nix-ld
+      gaming
       development
       office
       images

@@ -3,8 +3,9 @@
 { self, inputs, ... }: {
 
   flake.nixosModules.phCursors = { pkgs, lib, ... }: {
-    fonts.packages = with pkgs.nerd-fonts; [
-      mononoki
+    fonts.packages = with pkgs; [
+      corefonts
+      nerd-fonts.mononoki
     ];
 
     environment.systemPackages = with pkgs; [

@@ -6,7 +6,6 @@
     { self', pkgs, ... }: {
       environment.systemPackages = [
         self'.packages.wezterm
-        pkgs.nerd-fonts.mononoki
       ];
     }
   );
