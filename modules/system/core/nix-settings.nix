@@ -17,8 +17,8 @@
           "nix-command"
           "flakes"
         ];
+        nix-path = [ "nixpkgs=${inputs.nixpkgs}" ];
       };
-      nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
       optimise.automatic = true;
       gc = {
         automatic = true;
