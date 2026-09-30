@@ -12,6 +12,7 @@
       gaming
       development
       office
+      termstuff
       images
       fastfetch
       mpv
