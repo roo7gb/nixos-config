@@ -24,13 +24,18 @@
     packages = {
       zsh = inputs.wrappers.wrappers.zsh.wrap {
         inherit pkgs;
-        runtimePkgs = [pkgs.carapace pkgs.fzf];
+        runtimePkgs = [
+          pkgs.carapace
+          pkgs.fzf
+          pkgs.lsd
+        ];
         zshAliases = {
           ls = lib.getExe pkgs.lsd;
           v = lib.getExe self'.packages.nvim;
           carapace = lib.getExe pkgs.carapace;
-          ff = "fastfetch --disable-linewrap --logo-type kitty --logo-recache --logo-height 15 --logo ~/.ff_logo.png";
+          ff = ''${lib.getExe self'.packages.fastfetch} --disable-linewrap --logo-type kitty --logo-recache --logo-height 15 --logo ~/.ff_logo.png'';
           devenv = lib.getExe pkgs.devenv;
+          lg = lib.getExe pkgs.lazygit;
           yolo = ''${lib.getExe self'.packages.git} add . && ${lib.getExe self'.packages.git} commit -m "$(curl -fsSL https://whatthecommit.com/index.txt)" -m '(auto-msg whatthecommit.com)' -m "$(${lib.getExe self'.packages.git} status)" && ${lib.getExe self'.packages.git} push'';
           yeet = "rm -rf";
           nsh = "nix-shell -p";
