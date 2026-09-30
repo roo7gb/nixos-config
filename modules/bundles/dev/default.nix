@@ -13,6 +13,7 @@
       imports = modules;
       environment.systemPackages = with pkgs; [
         devenv
+        lazygit
         gnumake
         opencode
       ];
