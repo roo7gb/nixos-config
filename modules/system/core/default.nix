@@ -20,6 +20,13 @@
       udisks2.enable = true;
       gvfs.enable = true;
       upower.enable = true;
+      printing = {
+        enable = true;
+        drivers = with pkgs; [
+          cups-filters
+          cups-browsed
+        ];
+      };
     };
     environment.systemPackages = with pkgs; [
       vim

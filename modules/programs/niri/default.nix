@@ -37,6 +37,7 @@
           withSystemVencord = true;
         })
         xwayland-satellite
+        floorp-bin
         inputs'.zen-browser.packages.default
       ];
     }
