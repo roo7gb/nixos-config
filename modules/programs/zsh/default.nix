@@ -33,7 +33,7 @@
           ls = lib.getExe pkgs.lsd;
           v = lib.getExe self'.packages.nvim;
           carapace = lib.getExe pkgs.carapace;
-          ff = ''${lib.getExe self'.packages.fastfetch} --disable-linewrap --logo-type kitty --logo-recache --logo-height 15 --logo ~/.ff_logo.png'';
+          ff = ''${lib.getExe self'.packages.fastfetch} --disable-linewrap --logo-type kitty --logo-cache regen --logo-height 15 --logo ~/.ff_logo.png'';
           devenv = lib.getExe pkgs.devenv;
           lg = lib.getExe pkgs.lazygit;
           yolo = ''${lib.getExe self'.packages.git} add . && ${lib.getExe self'.packages.git} commit -m "$(curl -fsSL https://whatthecommit.com/index.txt)" -m '(auto-msg whatthecommit.com)' -m "$(${lib.getExe self'.packages.git} status)" && ${lib.getExe self'.packages.git} push'';
@@ -59,7 +59,7 @@
             eval "$(${lib.getExe self'.packages.ohMyPosh} init zsh)"
 
             ${lib.getExe pkgs.any-nix-shell} zsh --info-right | source /dev/stdin
-            fastfetch --disable-linewrap --logo-type kitty --logo-recache --logo-height 15 --logo ~/.ff_logo.png
+            fastfetch --disable-linewrap --logo-type kitty --logo-cache regen --logo-height 15 --logo ~/.ff_logo.png
         '';
       };
       ohMyPosh = inputs.wrappers.wrappers.oh-my-posh.wrap {
