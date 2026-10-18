@@ -38,7 +38,6 @@
         })
         xwayland-satellite
         floorp-bin
-        inputs'.zen-browser.packages.default
       ];
     }
   );
