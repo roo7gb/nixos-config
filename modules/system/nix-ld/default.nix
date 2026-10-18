@@ -12,6 +12,7 @@
           stdenv.cc.cc
           zlib
           libusb1
+          libGLU
         ];
       };
     }
