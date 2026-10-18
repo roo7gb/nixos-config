@@ -30,12 +30,6 @@
       flake = false;
     };
 
-    # web browser of choice
-    zen-browser = {
-      url = "github:youwen5/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     # flake parts
     flake-parts = {
       url = "github:hercules-ci/flake-parts";
