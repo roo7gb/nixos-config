@@ -11,6 +11,9 @@
       };
 
       kernelPackages = pkgs.linuxPackages_latest;
+      kernelParams = [
+        "nvidia-drm.preserve_video_memory_allocations=1"
+      ];
     };
   };
 }

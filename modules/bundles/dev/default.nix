@@ -15,7 +15,7 @@
         devenv
         lazygit
         gnumake
-        opencode
+        # opencode
       ];
     }
   );

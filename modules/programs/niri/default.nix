@@ -34,7 +34,6 @@
         spotatui
         (vesktop.override {
           withMiddleClickScroll = true;
-          withSystemVencord = true;
         })
         xwayland-satellite
         floorp-bin
