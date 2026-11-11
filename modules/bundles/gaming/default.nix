@@ -13,6 +13,9 @@
 
       environment.systemPackages = [
         pkgs.prismlauncher
+        (pkgs.retroarch.withCores (cores: with cores; [
+          mgba
+        ]))
         unfreePkgs.vintagestory
       ];
     }
