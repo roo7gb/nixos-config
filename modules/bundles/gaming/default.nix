@@ -15,6 +15,8 @@
         pkgs.prismlauncher
         (pkgs.retroarch.withCores (cores: with cores; [
           mgba
+          citra
+          melonds
         ]))
         unfreePkgs.vintagestory
       ];
