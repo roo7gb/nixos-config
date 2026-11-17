@@ -8,18 +8,17 @@
       modules = with self.nixosModules; [
         steam
       ];
+      packages = with pkgs; [
+        prismlauncher
+        (retroarch.withCores (cores: with cores; [
+          mgba
+        ]))
+        azahar
+        melonds
+      ];
     in {
       imports = modules;
-
-      environment.systemPackages = [
-        pkgs.prismlauncher
-        (pkgs.retroarch.withCores (cores: with cores; [
-          mgba
-          citra
-          melonds
-        ]))
-        unfreePkgs.vintagestory
-      ];
+      environment.systemPackages = packages ++ [ unfreePkgs.vintagestory ];
     }
   );
 }
