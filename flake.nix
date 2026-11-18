@@ -7,27 +7,10 @@
     # use unstable pkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    # hyprland setup
-    hyprland = {
-      url = "github:roo7gb/hypr";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    hyprland-config = {
-      url = "github:roo7gb/hypr";
-      flake = false;
-    };
-
     # neovim setup
     nvim = {
       url = "github:roo7gb/nvim";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    # quickshell setup
-    quickshell = {
-      url = "github:roo7gb/quickshell";
-      flake = false;
     };
 
     # flake parts
