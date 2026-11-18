@@ -23,8 +23,8 @@
     "niri/workspaces": {
         "format": "{icon}",
         "format-icons": {
-            "active": "",
-            "default": ""
+            "active": " ",
+            "default": " "
         }
     },
     "custom/hardware-wrap": {
